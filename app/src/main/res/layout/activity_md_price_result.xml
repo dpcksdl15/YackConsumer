@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/laout1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@drawable/box_shadow_bottom"
+        >
+
+
+        <ImageView
+            android:id="@+id/bt_back_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            app:srcCompat="@drawable/backbutton_icon"
+            />
+
+        <EditText
+            android:id="@+id/et_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+
+            android:inputType="textPersonName"
+            android:background="@drawable/md_price_result_text"
+            android:textSize="16sp"
+            android:fontFamily="@font/nb"
+            android:textColor="#404041"
+            android:hint="약품명을 입력해 주세요"
+            android:text="" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingRight="16dp"
+            android:gravity="right">
+
+            <ImageButton
+                android:id="@+id/bt_textcancel_icon"
+                android:layout_width="14dp"
+                android:layout_height="match_parent"
+                android:background="#00000000"
+                app:srcCompat="@drawable/icon_x_o_18"
+                android:scaleType="fitCenter"/>
+
+
+            <ImageView
+                android:id="@+id/bt_search_icon"
+                android:layout_width="22dp"
+                android:layout_height="22dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="17dp"
+                app:srcCompat="@drawable/search_icon"
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal"
+        android:background="#33d8d8d8"
+        android:paddingTop="20dp"
+        android:paddingLeft="20dp">
+
+
+        <TextView
+            android:id="@+id/textView10"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nb"
+            android:textSize="12sp"
+            android:text="총" />
+        <TextView
+            android:id="@+id/tv_search_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:fontFamily="@font/nb"
+            android:textSize="12sp"
+            android:text="0" />
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/nb"
+            android:textSize="12sp"
+            android:text="개" />
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/laout2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/laout1"
+        android:paddingLeft="11dp"
+        android:paddingRight="11dp"
+        android:paddingTop="16dp"
+        android:background="#33d8d8d8"
+        >
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="9dp"
+            android:layout_marginRight="9dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+
+        <Button
+            android:id="@+id/bt_add"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/md_price_save_button"
+            android:fontFamily="@font/neb"
+            android:letterSpacing="0.1"
+            android:text="추가하기"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</LinearLayout>

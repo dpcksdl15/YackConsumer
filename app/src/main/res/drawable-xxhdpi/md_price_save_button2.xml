@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp"/>
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#00dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp"/>
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#06dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#09dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#0bdbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#0ddbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#10dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#12dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#15dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#17dbdbdb" />
+    </shape>
+</item>
+
+    <!-- Drop Shadow Stack --> <item>
+    <shape>
+        <padding
+            android:top="0.5dp"
+            android:bottom="0.5dp"
+            android:left="0.5dp"
+            android:right="0.5dp" />
+        <corners android:radius="4dp"/>
+        <solid
+            android:color="#1adbdbdb" />
+    </shape>
+</item>
+
+
+    <!-- Background -->
+
+    <item>
+        <shape>
+            <solid android:color="#067bfe" />
+        <corners android:radius="4dp"/>
+        </shape>
+    </item>
+
+
+</layer-list>

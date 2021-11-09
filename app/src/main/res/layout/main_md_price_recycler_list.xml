@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/md_price_main_result_list"
+    android:layout_marginBottom="20dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="14dp"
+            android:fontFamily="@font/neb"
+            android:textColor="#404041"
+            android:textSize="14sp"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="" />
+
+        <ImageButton
+            android:id="@+id/ibt_delete"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginRight="10dp"
+            android:backgroundTint="@color/white"
+            app:srcCompat="@drawable/icon_x" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_code"
+        android:layout_width="match_parent"
+        android:layout_height="16dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:fontFamily="@font/neb"
+        android:textColor="#404041"
+        android:textSize="14sp"
+        />
+
+
+    <LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="32dp"
+    android:orientation="horizontal"
+        android:layout_marginTop="16dp"
+    android:paddingRight="16dp"
+    android:paddingLeft="16dp"
+
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        android:layout_marginRight="10dp"
+        >
+
+        <Spinner
+            android:id="@+id/sp_md_days"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/md_price_search_text"
+            android:spinnerMode="dropdown"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_weight="1"
+        >
+
+        <Spinner
+            android:id="@+id/sp_md_day_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/md_price_search_text"
+            android:spinnerMode="dropdown"/>
+
+    </LinearLayout>
+
+
+</LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="32dp"
+        android:orientation="horizontal"
+        android:paddingRight="16dp"
+        android:paddingLeft="16dp"
+        android:layout_marginTop="8dp"
+        >
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            >
+
+        <Spinner
+            android:id="@+id/sp_md_count"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/md_price_search_text"
+            android:spinnerMode="dropdown"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:orientation="horizontal"
+            >
+
+        <TextView
+            android:id="@+id/tv_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:background="@drawable/md_price_toglebox_left"
+            android:fontFamily="@font/nb"
+            android:textColor="#067bfe"
+            android:textSize="12sp"
+            android:text="보험" />
+
+            <TextView
+                android:id="@+id/tv_notlist"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:background="@drawable/md_price_toglebox_right"
+                android:fontFamily="@font/nb"
+                android:textColor="#067bfe"
+                android:textSize="12sp"
+                android:text="비보험" />
+
+        </LinearLayout>
+
+
+
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="20dp"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:layout_marginBottom="16dp"
+        android:orientation="horizontal"
+        >
+
+
+        <TextView
+            android:id="@+id/textView19"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/nb"
+            android:textSize="12sp"
+            android:textColor="#828282"
+            android:text="적용일자" />
+
+        <TextView
+            android:id="@+id/tv_stdday"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="6dp"
+            android:layout_weight="1"
+            android:fontFamily="@font/nb"
+            android:textSize="12sp"
+            android:textColor="#a9a9a9"
+            android:text="적용일자" />
+
+        <ImageView
+            android:id="@+id/imageView7"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginRight="6dp"
+            app:srcCompat="@drawable/cap_icon" />
+
+        <TextView
+            android:id="@+id/tv_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/neb"
+            android:textSize="16sp"
+            android:textColor="#404041"
+            android:text="100" />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/neb"
+            android:textSize="16sp"
+            android:textColor="#404041"
+            android:text="원" />
+
+    </LinearLayout>
+
+
+    </LinearLayout>

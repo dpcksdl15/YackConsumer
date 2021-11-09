@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+
+    <LinearLayout
+        android:id="@+id/laout1"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        >
+
+
+        <ImageView
+            android:id="@+id/bt_back_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            app:srcCompat="@drawable/backbutton_icon"
+            />
+
+        <TextView
+            android:id="@+id/et_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/nr"
+            android:textColor="#404041"
+            android:text="의약품 검색" />
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+
+            <TextView
+                android:id="@+id/bt_search_clear"
+                android:layout_width="50dp"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#ff1d50"
+                android:fontFamily="@font/nr"
+                android:text=""
+                />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="9dp"
+        android:paddingBottom="8dp"
+        android:gravity="center"
+        android:background="@drawable/box_shadow_bottom"
+        >
+
+
+        <EditText
+            android:id="@+id/et_md_search_name"
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginRight="12dp"
+            android:layout_weight="1"
+            android:background="@drawable/backgound_md_price_search_text"
+            android:drawableLeft="@drawable/search_icon"
+            android:drawablePadding="16dp"
+            android:hint="약품이름 또는 약품코드 입력"
+            android:inputType="textPersonName"
+            android:paddingLeft="10dp"
+            android:text=""
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/bt_search"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:background="@drawable/backgound_md_price_search_button"
+            android:fontFamily="@font/nb"
+            android:text="검색"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:paddingTop="16dp"
+        android:paddingBottom="20dp"
+        android:paddingLeft="16dp"
+        android:background="#19d8d8d8">
+
+        <TextView
+            android:id="@+id/tv_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:fontFamily="@font/nb"
+            android:text="" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/non_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:layout_weight="1">
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#19d8d8d8"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </RelativeLayout>
+
+</LinearLayout>

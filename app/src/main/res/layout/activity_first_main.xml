@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FirstMainActivity"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:background="@drawable/background_first_main_top">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/logo_text2"
+            android:layout_marginBottom="14dp"
+            android:layout_marginTop="14dp"/>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+<!--상단-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="568dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/bt_first_main_button_1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_button_1"
+            android:scaleType="fitXY"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_weight="1"
+        >
+
+        <ImageView
+            android:id="@+id/bt_first_main_button_2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/main_button_2"
+            android:scaleType="fitXY"
+            />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="110dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="56dp"
+        >
+
+        <androidx.viewpager2.widget.ViewPager2
+            android:id="@+id/viewpager_first_main"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:background="#fafafa"
+                android:backgroundTint="#fafafa">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    app:srcCompat="@drawable/bottom_text_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nr"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#b6b6b6"
+                    android:text="(주)이블루 퍼프 (대표 이나현)\n사업자 등록번호 : 572-87-00597\n본사 : 경상북도 구미시 산호대로 253, 구미첨단의료기술타워 303호\nR&amp;D센터 : 서울특별시 마포구 마포대로 114 IBK 창공 5층\n전화번호 : 1522-0229\n홈페이지 : www.eblue.co.kr\n대표이메일 : ceo@eblue.co.kr"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="서비스 이용약관"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="|"/>
+
+                    <TextView
+                        android:id="@+id/tv_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="개인정보처리방침"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

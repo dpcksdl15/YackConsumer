@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#4cd8d8d8">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="#067bfe"
+        >
+
+
+        <ImageView
+            android:id="@+id/bt_back_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            app:srcCompat="@drawable/backbutton_icon_w"
+            />
+
+        <TextView
+            android:id="@+id/tv_search_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginRight="50dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/nb"
+            android:textColor="#ffffff"
+            android:text="의약품 검색"
+            android:maxLines="1"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/imgv_md_img"
+            android:layout_width="match_parent"
+            android:layout_height="196dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_search_name2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@drawable/box_shadow_bottom"
+            android:fontFamily="@font/gm"
+            android:textSize="16sp"
+            android:textColor="#404041"
+            android:text="한미아스피린장"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="4dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/gm"
+                android:textSize="14sp"
+                android:textColor="#404041"
+                android:drawableStart="@drawable/icon1"
+                android:text="  용법・용량"/>
+
+            <TextView
+                android:id="@+id/tv_search_md_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgound_md_price_result_list"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/nr"
+                android:lineHeight="17sp"
+                android:textSize="12sp"
+                android:textColor="#404041"
+                android:text="성인은 1회 1정, 1일 1회 복용합니다.
+이 약은 장용정이므로 충분한 물과 함께 식전에 복용할 수 있습니다."/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/gm"
+                android:textSize="14sp"
+                android:textColor="#404041"
+                android:drawableStart="@drawable/icon2"
+                android:text="  보관 방법"/>
+
+            <TextView
+                android:id="@+id/tv_search_md_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgound_md_price_result_list"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/nr"
+                android:lineHeight="17sp"
+                android:textSize="12sp"
+                android:textColor="#404041"
+                android:text="습기를 피해 실온에서 보관하십시오.
+어린이의 손이 닿지 않는 곳에 보관하십시오."/>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="14dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="16dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/gm"
+                android:textSize="14sp"
+                android:textColor="#404041"
+                android:drawableStart="@drawable/icon3"
+                android:text="  효과 ・ 효능"/>
+
+            <TextView
+                android:id="@+id/tv_search_md_content3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/backgound_md_price_result_list"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:fontFamily="@font/nr"
+                android:textSize="12sp"
+                android:lineHeight="17sp"
+                android:textColor="#404041"
+                android:text="이 약은 심근경색, 뇌경색, 불안정형 협심증에서 혈전 생성 억제와 관상동맥 우회술(CABG) 또는 경피경관 관상동맥 성형술(PTCA) 후 혈전 생성 억제와 고위험군환자(허혈성 심장질환의 가족력, 고혈압, 고콜레스테롤혈증, 비만, 당뇨 등 복합적 위험인자를 가진 환자)에서 심혈관계 위험성 감소에 사용합니다."/>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/box_shadow_bottom">
+
+            <TextView
+                android:id="@+id/tv_search_md_content4"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:drawableStart="@drawable/icon4"
+                android:fontFamily="@font/gm"
+                android:textSize="16sp"
+                android:textColor="#404041"
+                android:text="  부작용"/>
+
+                <ImageView
+                    android:id="@+id/img_icon6"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon6"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_content1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                >
+
+                <TextView
+                    android:id="@+id/tv_search_md_content4_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/backgound_md_price_result_list"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:fontFamily="@font/nr"
+                    android:textSize="12sp"
+                    android:lineHeight="17sp"
+                    android:textColor="#404041"
+                    android:text="이 약은 심근경색, 뇌경색, 불안정형 협심증에서 혈전 생성 억제와 관상동맥 우회술(CABG) 또는 경피경관 관상동맥 성형술(PTCA) 후 혈전 생성 억제와 고위험군환자(허혈성 심장질환의 가족력, 고혈압, 고콜레스테롤혈증, 비만, 당뇨 등 복합적 위험인자를 가진 환자)에서 심혈관계 위험성 감소에 사용합니다."/>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/box_shadow_bottom">
+
+            <TextView
+                android:id="@+id/tv_search_md_content5"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_weight="1"
+                android:paddingTop="16dp"
+                android:paddingBottom="16dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:drawableStart="@drawable/icon5"
+                android:fontFamily="@font/gm"
+                android:textSize="16sp"
+                android:textColor="#404041"
+                android:text="  사용상의 주의사항"/>
+
+                <ImageView
+                    android:id="@+id/img_icon7"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icon6"
+                    android:scaleType="centerInside"
+                    android:layout_marginRight="15dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_content2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_search_md_content5_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginBottom="16dp"
+                    android:background="@drawable/backgound_md_price_result_list"
+                    android:layout_marginLeft="16dp"
+                    android:layout_marginRight="16dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:fontFamily="@font/nr"
+                    android:textSize="12sp"
+                    android:lineHeight="17sp"
+                    android:textColor="#404041"
+                    android:text="이 약은 심근경색, 뇌경색, 불안정형 협심증에서 혈전 생성 억제와 관상동맥 우회술(CABG) 또는 경피경관 관상동맥 성형술(PTCA) 후 혈전 생성 억제와 고위험군환자(허혈성 심장질환의 가족력, 고혈압, 고콜레스테롤혈증, 비만, 당뇨 등 복합적 위험인자를 가진 환자)에서 심혈관계 위험성 감소에 사용합니다."/>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
+
+</LinearLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:layout_marginBottom="12dp"
+    android:background="@drawable/backgound_md_price_result_list"
+    android:orientation="horizontal">
+
+
+    <LinearLayout
+        android:layout_width="146dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/imgv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"/>
+
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_weight="1"
+        android:layout_marginLeft="16dp"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/tv_md_name"
+            android:layout_width="match_parent"
+            android:layout_height="16dp"
+            android:layout_marginTop="20dp"
+            android:paddingRight="12dp"
+            android:gravity="center"
+            android:textAlignment="viewEnd"
+            android:fontFamily="@font/neb"
+            android:textSize="14sp"
+            android:textColor="#404041"
+            android:maxLines="1"
+            android:text="TextView"
+            tools:ignore="RtlCompat" />
+
+
+            <TextView
+                android:id="@+id/tv_md_code"
+                android:layout_width="match_parent"
+                android:layout_height="16dp"
+                android:layout_marginTop="8dp"
+                android:paddingRight="12dp"
+                android:gravity="center"
+                android:textAlignment="viewEnd"
+                android:fontFamily="@font/nb"
+                android:textColor="#828282"
+                android:textSize="14sp"
+                android:maxLines="1"
+                android:text="s"
+                tools:ignore="RtlCompat" />
+
+
+                <TextView
+                    android:id="@+id/tv_md_comp"
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginBottom="20dp"
+                    android:paddingRight="12dp"
+                    android:gravity="center"
+                    android:textAlignment="viewEnd"
+                    android:fontFamily="@font/nb"
+                    android:textSize="12sp"
+                    android:textColor="#828282"
+                    android:maxLines="1"
+                    android:text="d"
+                    tools:ignore="RtlCompat" />
+
+    </LinearLayout>
+
+</LinearLayout>

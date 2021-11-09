@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_main"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="96dp"
+                    android:layout_height="26dp"
+                    android:layout_marginTop="56dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="244.6dp"
+                    app:srcCompat="@drawable/logo_text" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="44dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/bt_md_price_search"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginRight="8dp"
+
+                        android:background="@drawable/backgound_main_button"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/bt_md_search"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginLeft="8dp"
+                        app:srcCompat="@drawable/main_button2"
+                        android:scaleType="centerCrop"
+                        android:background="@drawable/backgound_main_button"/>
+
+
+                </LinearLayout>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ph_sell_search"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginRight="8dp"
+
+                        android:background="@drawable/backgound_main_button"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/pt_ht_search"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginLeft="8dp"
+
+                        android:background="@drawable/backgound_main_button"
+                        android:scaleType="centerCrop"
+                        />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageButton
+                        android:id="@+id/ph_pt_community"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginRight="8dp"
+
+                        android:background="@drawable/backgound_main_button"
+                        android:scaleType="centerCrop"
+                        />
+
+                    <ImageButton
+                        android:id="@+id/mypage"
+                        android:layout_width="159dp"
+                        android:layout_height="159dp"
+                        android:layout_marginLeft="8dp"
+
+                        android:background="@drawable/backgound_main_button"
+                        android:scaleType="centerCrop"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginTop="130dp"
+                android:background="#fafafa"
+                android:backgroundTint="#fafafa">
+
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="60dp"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    app:srcCompat="@drawable/bottom_text_logo" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginLeft="30dp"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/nr"
+                    android:lineSpacingExtra="3dp"
+                    android:textColor="#b6b6b6"
+                    android:text="(주)이블루 퍼프 (대표 이나현)\n사업자 등록번호 : 572-87-00597\n본사 : 경상북도 구미시 산호대로 253, 구미첨단의료기술타워 303호\nR&amp;D센터 : 서울특별시 마포구 마포대로 114 IBK 창공 5층\n전화번호 : 1522-0229\n홈페이지 : www.eblue.co.kr\n대표이메일 : ceo@eblue.co.kr"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="14dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginBottom="20dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tv_service"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="서비스 이용약관"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="|"/>
+
+                    <TextView
+                        android:id="@+id/tv_data"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:textSize="12sp"
+                        android:fontFamily="@font/neb"
+                        android:textColor="#828282"
+                        android:text="개인정보처리방침"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+</LinearLayout>
