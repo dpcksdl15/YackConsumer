@@ -133,7 +133,7 @@
             android:id="@+id/recyclerview2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="#19d8d8d8"
+            android:background="@drawable/background_mdprice_recyclerview_empty"
             android:paddingLeft="20dp"
             android:paddingRight="20dp">
 
