@@ -270,7 +270,7 @@ public class MdSearchActivity extends AppCompatActivity {
                         break;
 
                     case XmlPullParser.END_TAG:
-                        tag= xpp.getName();
+
 
                 }
 

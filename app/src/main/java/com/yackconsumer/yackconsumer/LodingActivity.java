@@ -24,6 +24,7 @@ public class LodingActivity extends AppCompatActivity {
                                 @Override
                                 public void run() {
 
+
                                     Intent intent = new Intent(getApplicationContext(), FirstMainActivity.class);
                                     startActivity(intent);
                                     finish();

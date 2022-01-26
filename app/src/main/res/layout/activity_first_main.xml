@@ -24,7 +24,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp">
+        >
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -34,15 +34,205 @@
 <!--상단-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="568dp"
+                android:layout_height="wrap_content"
+                android:weightSum="6"
+                android:layout_marginTop="20dp"
                 android:paddingLeft="20dp"
                 android:paddingRight="20dp"
                 android:orientation="vertical">
 
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_main_covid"
+                    >
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="20dp"
+                        android:textSize="18sp"
+                        android:layout_marginTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/neb"
+                        android:text="코로나19 현황"
+                        />
+
+                    <TextView
+                        android:id="@+id/covid_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="10dp"
+                        android:textSize="8sp"
+                        android:textAlignment="viewEnd"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/nb"
+                        android:text="시간"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="10sp"
+                        android:layout_marginBottom="10dp"
+                        android:weightSum="4"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nb"
+                                android:textSize="14sp"
+                                android:text="일일 확진"/>
+
+                            <TextView
+                                android:id="@+id/covid_dayCount"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="#067bfe"
+                                android:fontFamily="@font/neb"
+                                android:textSize="22sp"
+                                android:text="5,805"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="70dp"
+                            android:background="#dbdbdb"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nb"
+                                android:textSize="14sp"
+                                android:text="전체 확진"/>
+
+                            <TextView
+                                android:id="@+id/covid_sumConut"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:paddingRight="10dp"
+                                android:paddingLeft="10dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/neb"
+                                android:autoSizeTextType="uniform"
+                                android:autoSizeMaxTextSize="22sp"
+                                android:maxLines="1"
+                                android:text="5,805"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="70dp"
+                            android:background="#dbdbdb"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nb"
+                                android:textSize="14sp"
+                                android:text="일일 사망"/>
+
+                            <TextView
+                                android:id="@+id/covid_dayDeath"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="#067bfe"
+                                android:fontFamily="@font/neb"
+                                android:textSize="22sp"
+                                android:text="5,805"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="1dp"
+                            android:layout_height="70dp"
+                            android:background="#dbdbdb"
+                            android:layout_gravity="center"
+                            android:orientation="vertical"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="20dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/nb"
+                                android:textSize="14sp"
+                                android:text="전체 사망"/>
+
+                            <TextView
+                                android:id="@+id/covid_sumDeath"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:textAlignment="center"
+                                android:gravity="center"
+                                android:textColor="@color/black"
+                                android:fontFamily="@font/neb"
+                                android:textSize="22sp"
+                                android:text="5,805"/>
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_weight="1"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_weight="2"
         >
 
         <ImageView
@@ -57,9 +247,9 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_marginTop="20dp"
-        android:layout_weight="1"
+        android:layout_weight="2"
         >
 
         <ImageView
@@ -75,6 +265,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="110dp"
+        android:layout_weight="1"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="56dp"
         >

@@ -5,6 +5,7 @@ import androidx.viewpager2.widget.ViewPager2;
 
 import android.content.Intent;
 import android.net.Uri;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -13,6 +14,19 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.xmlpull.v1.XmlPullParser;
+import org.xmlpull.v1.XmlPullParserException;
+import org.xmlpull.v1.XmlPullParserFactory;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
@@ -24,6 +38,8 @@ public class FirstMainActivity extends AppCompatActivity {
 
     TextView tv_service, tv_data;
 
+    AsyncTask asyncTask;
+
     View.OnClickListener cl;
 
     int viewcount = 0;
@@ -34,6 +50,22 @@ public class FirstMainActivity extends AppCompatActivity {
 
     Intent intent;
 
+
+    //코로나 현황판
+    TextView covid_time, covid_dayCount, covid_sumCount, covid_dayDeath,covid_sumDeath;
+
+    static String key = "sprTWrIlSrb7BWTxTvDTN%2Bi42nZGHioaXh31AageXSjEZVzttt8QTNKBRnjLYgvLSFVn66xOPQ2dkVwFjZu%2Bbw%3D%3D";
+
+    String url = "http://openapi.data.go.kr/openapi/service/rest/Covid19/getCovid19InfStateJson?serviceKey=";
+    String url2 = "&pageNo=1&numOfRows=10&startCreateDt=";
+    String url3 = "&endCreateDt=";
+
+    URL covid_url;
+
+    ArrayList<Integer> decideCntLsit = new ArrayList<>();
+    ArrayList<Integer> deathCntList = new ArrayList<>();
+
+    int startDt, endDt, startDeathDt, endDeathDt;
 
 
     int image[] = {R.drawable.main_baaner_1, R.drawable.main_banner_2, R.drawable.main_banner_3};
@@ -50,12 +82,22 @@ public class FirstMainActivity extends AppCompatActivity {
 
         tv_service = findViewById(R.id.tv_service);
         tv_data = findViewById(R.id.tv_data);
+        covid_time = findViewById(R.id.covid_time);
+        covid_dayCount = findViewById(R.id.covid_dayCount);
+        covid_sumCount = findViewById(R.id.covid_sumConut);
+        covid_sumDeath = findViewById(R.id.covid_sumDeath);
+        covid_dayDeath = findViewById(R.id.covid_dayDeath);
 
         viewPager = findViewById(R.id.viewpager_first_main);
 
         viewpager2Adapter = new Viewpager2Adapter(image);
 
         viewPager.setAdapter(viewpager2Adapter);
+
+        asyncTask = new AsyncTask();
+        asyncTask.execute();
+
+        bennertimer();
 
         cl = new View.OnClickListener() {
             @Override
@@ -125,9 +167,144 @@ public class FirstMainActivity extends AppCompatActivity {
 
     }
 
+    public class AsyncTask extends android.os.AsyncTask<Void,Void,Void>{
+
+        @Override
+        protected Void doInBackground(Void... voids) {
+
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    covid_count();
+
+                }
+            });
+
+            return null;
+        }
+    }
+
     public void onBackpressde(){
         onBackPressed();
     }
+
+    //코로나 현황
+    public void covid_count(){
+        //오늘 날짜 구하기
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyyMMdd");
+        String nowDate = dateformat.format(date);
+        Log.d("dk", "covid_count: " + nowDate);
+
+        //어제 날짜 구하기
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE,-1);
+        String beforeDate = dateformat.format(calendar.getTime());
+        Log.d("dk", "covid_count: " + beforeDate);
+
+
+        String total_url = url + key + url2 + beforeDate + url3 + nowDate;
+
+        Log.d("dk", "url : " + total_url);
+
+        new Thread() {
+            @Override
+            public void run() {
+
+        try {
+            covid_url = new URL(total_url);
+
+            InputStream is = covid_url.openStream();
+
+            XmlPullParserFactory factory = XmlPullParserFactory.newInstance();
+
+            XmlPullParser xpp = factory.newPullParser();
+
+            xpp.setInput(new InputStreamReader(is, "UTF-8"));
+
+            xpp.next();
+
+            String tagName;
+            int count = 0;
+
+            int eventType= xpp.getEventType();
+
+            while ( eventType != XmlPullParser.END_DOCUMENT){
+
+                switch (eventType){
+
+                    case XmlPullParser.START_TAG :
+                        tagName = xpp.getName();
+
+                        if (tagName.equals("item")) ;
+                            else if (tagName.equals("deathCnt")) {
+                            xpp.next();
+                            deathCntList.add(Integer.valueOf(xpp.getText()));
+                            Log.d("deathCnt", xpp.getText());
+
+                        }
+                            else if (tagName.equals("decideCnt")){
+                            xpp.next();
+                            decideCntLsit.add(Integer.parseInt(xpp.getText()));
+                            Log.d("tagname", xpp.getText());
+
+                        }
+
+                        break;
+
+                    case XmlPullParser.END_TAG :
+                        tagName= xpp.getName();
+                        break;
+                }
+                eventType= xpp.next();
+
+            }
+            is.close();
+
+        } catch (MalformedURLException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (XmlPullParserException e) {
+            e.printStackTrace();
+        } catch (Exception e){
+            e.printStackTrace();
+        }
+
+                covid_input();
+            }
+        } .start();
+
+
+
+    }
+
+    public void covid_input() {
+
+        startDt = decideCntLsit.get(0);
+        endDt = decideCntLsit.get(1);
+        startDeathDt = deathCntList.get(0);
+        endDeathDt = deathCntList.get(1);
+
+        Log.d("확인", String.valueOf(startDt));
+
+
+        covid_dayCount.setText(String.valueOf(startDt-endDt));
+        covid_sumCount.setText(String.valueOf(startDt));
+        covid_dayDeath.setText(String.valueOf(startDeathDt-endDeathDt));
+        covid_sumDeath.setText(String.valueOf(startDeathDt));
+
+        long now = System.currentTimeMillis();
+        Date date = new Date(now);
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyy년-MM월-dd일");
+        String toDate = dateformat.format(date);
+        Log.d("dk", "covid_count: " + toDate);
+        covid_time.setText(toDate);
+
+    }
+
+
 
 
     @Override
@@ -150,11 +327,12 @@ public class FirstMainActivity extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        bennertimer();
+
     }
 
     public void bennertimer(){
         final Handler handler = new Handler();
+
     final Runnable update = new Runnable() {
         @Override
         public void run() {
@@ -170,6 +348,7 @@ public class FirstMainActivity extends AppCompatActivity {
                 timer.schedule(new TimerTask() {
                     @Override
                     public void run() {
+                        handler.removeMessages(0);
                         handler.post(update);
                         Log.d("실행","스케줄러");
                     }
