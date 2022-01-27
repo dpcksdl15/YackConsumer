@@ -66,6 +66,7 @@ public class FirstMainActivity extends AppCompatActivity {
     ArrayList<Integer> deathCntList = new ArrayList<>();
 
     int startDt, endDt, startDeathDt, endDeathDt;
+    String nowDate, beforeDate, toDate;
 
 
     int image[] = {R.drawable.main_baaner_1, R.drawable.main_banner_2, R.drawable.main_banner_3};
@@ -175,7 +176,7 @@ public class FirstMainActivity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    covid_count();
+                    today_date(0);
 
                 }
             });
@@ -188,21 +189,32 @@ public class FirstMainActivity extends AppCompatActivity {
         onBackPressed();
     }
 
+    public void today_date(int i){
+        //오늘 날짜 구하기
+        SimpleDateFormat dateformat = new SimpleDateFormat("yyyyMMdd");
+        Calendar calendar = Calendar.getInstance();
+        calendar.add(Calendar.DATE,-(i));
+        nowDate  = dateformat.format(calendar.getTime());
+        Log.d("today", "covid_today: " + nowDate);
+
+        //전 날짜 구하기
+        Calendar calendar2 = Calendar.getInstance();
+        calendar2.add(Calendar.DATE,-(i+1));
+        beforeDate  = dateformat.format(calendar2.getTime());
+        Log.d("beforeday", "covid_beforeday: " + beforeDate);
+
+        //날짜 표기
+        SimpleDateFormat dateformat2 = new SimpleDateFormat("yyyy년-MM월-dd일");
+        Calendar calendar3 = Calendar.getInstance();
+        calendar3.add(Calendar.DATE,-(i));
+        toDate  = dateformat2.format(calendar3.getTime());
+        covid_time.setText(toDate);
+
+        covid_count();
+    }
+
     //코로나 현황
     public void covid_count(){
-        //오늘 날짜 구하기
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
-        SimpleDateFormat dateformat = new SimpleDateFormat("yyyyMMdd");
-        String nowDate = dateformat.format(date);
-        Log.d("dk", "covid_count: " + nowDate);
-
-        //어제 날짜 구하기
-        Calendar calendar = Calendar.getInstance();
-        calendar.add(Calendar.DATE,-1);
-        String beforeDate = dateformat.format(calendar.getTime());
-        Log.d("dk", "covid_count: " + beforeDate);
-
 
         String total_url = url + key + url2 + beforeDate + url3 + nowDate;
 
@@ -280,27 +292,26 @@ public class FirstMainActivity extends AppCompatActivity {
 
     }
 
+
     public void covid_input() {
 
-        startDt = decideCntLsit.get(0);
-        endDt = decideCntLsit.get(1);
-        startDeathDt = deathCntList.get(0);
-        endDeathDt = deathCntList.get(1);
+        try {
+            startDt = decideCntLsit.get(0);
+            endDt = decideCntLsit.get(1);
+            startDeathDt = deathCntList.get(0);
+            endDeathDt = deathCntList.get(1);
 
-        Log.d("확인", String.valueOf(startDt));
+            Log.d("확인", String.valueOf(startDt));
 
 
-        covid_dayCount.setText(String.valueOf(startDt-endDt));
-        covid_sumCount.setText(String.valueOf(startDt));
-        covid_dayDeath.setText(String.valueOf(startDeathDt-endDeathDt));
-        covid_sumDeath.setText(String.valueOf(startDeathDt));
+            covid_dayCount.setText(String.valueOf(startDt-endDt));
+            covid_sumCount.setText(String.valueOf(startDt));
+            covid_dayDeath.setText(String.valueOf(startDeathDt-endDeathDt));
+            covid_sumDeath.setText(String.valueOf(startDeathDt));
+        } catch (Exception e){
+            today_date(1);
+        }
 
-        long now = System.currentTimeMillis();
-        Date date = new Date(now);
-        SimpleDateFormat dateformat = new SimpleDateFormat("yyyy년-MM월-dd일");
-        String toDate = dateformat.format(date);
-        Log.d("dk", "covid_count: " + toDate);
-        covid_time.setText(toDate);
 
     }
 
@@ -354,5 +365,7 @@ public class FirstMainActivity extends AppCompatActivity {
                     }
                 }, 500, 4000);
     }
+
+
 
 }
