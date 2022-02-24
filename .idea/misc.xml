@@ -22,6 +22,8 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/backgound_md_price_result_list.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/backgound_md_price_search_button.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/backgound_md_price_search_text.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/backgound_receive_main_top1.xml" value="0.21354166666666666" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/backgound_receive_main_top2.xml" value="0.21354166666666666" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_add_button.xml" value="0.2171875" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_add_recycler_list.xml" value="0.2171875" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_add_recycler_list_b.xml" value="0.2171875" />
@@ -31,6 +33,7 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_cycle_type_b.xml" value="0.2994791666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_date.xml" value="0.2171875" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_alram_date_b.xml" value="0.2171875" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_date_seq.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_first_main_button.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_first_main_top.xml" value="0.2994791666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_main_covid.xml" value="0.1828125" />
@@ -38,6 +41,7 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/bottom_icon_select_color.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/box_shadow_bottom.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/box_shadow_top.xml" value="0.38229166666666664" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/dotted_line_horizontal.xml" value="0.5" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/md_price_result_list.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/md_price_search_text.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_first_main.xml" value="0.33" />
@@ -47,6 +51,8 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_price_result.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_search.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_search_result.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_pm_receive.xml" value="0.33" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_pm_receive_detail.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_provision.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_provision2.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/alram_add_recycler_list.xml" value="0.5" />
@@ -57,6 +63,8 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/fragment_main.xml" value="0.22" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/main_md_price_recycler_list.xml" value="0.67" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/md_search_main_recycler_list.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/pm_receive_detail_list.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/pm_recevie_list.xml" value="0.25885416666666666" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/sub_md_price_recycler_list.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/viewpage.xml" value="0.2833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/bottom_menu.xml" value="0.36614583333333334" />

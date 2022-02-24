@@ -1,5 +1,7 @@
 package com.yackconsumer.yackconsumer;
 
+import static com.yackconsumer.yackconsumer.MdSearchActivity.SslConnect.postHttps;
+
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Bitmap;
@@ -20,11 +22,22 @@ import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserFactory;
 
 import java.io.ByteArrayOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.HttpURLConnection;
+import java.net.MalformedURLException;
 import java.net.URL;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.ArrayList;
+
+import javax.net.ssl.HostnameVerifier;
+import javax.net.ssl.HttpsURLConnection;
+import javax.net.ssl.SSLContext;
+import javax.net.ssl.SSLSession;
+import javax.net.ssl.TrustManager;
+import javax.net.ssl.X509TrustManager;
 
 public class MdSearchActivity extends AppCompatActivity {
 
@@ -290,7 +303,7 @@ public class MdSearchActivity extends AppCompatActivity {
 
         try {
             for (int i =0 ; list.size() > i ; i++) {
-                queryUrl3 = "http://apis.data.go.kr/1470000/MdcinGrnIdntfcInfoService/getMdcinGrnIdntfcInfoList?serviceKey=" + key + "&numOfRows=10&pageNo=1&ITEM_SEQ=" + list.get(i);
+                queryUrl3 = "http://apis.data.go.kr/1470000/MdcinGrnIdntfcInfoService/getMdcinGrnIdntfcInfoList?serviceKey=" + key + "&item_seq=" + list.get(i);
                 url2 = new URL(queryUrl3);
                 Log.d("확인", queryUrl3);
 
@@ -321,7 +334,6 @@ public class MdSearchActivity extends AppCompatActivity {
 
                             if (tag.equals("item")) ;
                             else if (tag.equals("ITEM_IMAGE")) {
-
                                 xpp.next();
                                 Log.d("확인", xpp.getText());
                                 list5.add(xpp.getText());
@@ -356,6 +368,7 @@ public class MdSearchActivity extends AppCompatActivity {
     }
 
     private Bitmap getBitmap(String url) {
+        Log.d("확인url", url);
         URL imgUrl = null;
 
         HttpURLConnection connection = null;
@@ -363,6 +376,7 @@ public class MdSearchActivity extends AppCompatActivity {
         Bitmap retBitmap = null;
 
         try{
+            postHttps(url, 100, 100);
             imgUrl = new URL(url);
             connection = (HttpURLConnection) imgUrl.openConnection();
             connection.setDoInput(true);
@@ -370,7 +384,6 @@ public class MdSearchActivity extends AppCompatActivity {
             connection.connect();
 
             is = connection.getInputStream();
-//
             retBitmap = BitmapFactory.decodeStream(is);
         }catch(Exception e) {
             e.printStackTrace(); return null;
@@ -382,6 +395,72 @@ public class MdSearchActivity extends AppCompatActivity {
 
         }
     }
+
+    //웹서비스 요청시 SSL 인증서 에러 방지
+    public static class SslConnect {
+
+        // always verify the host - dont check for certificate
+        final static HostnameVerifier DO_NOT_VERIFY = new HostnameVerifier() {
+            public boolean verify(String hostname, SSLSession session) {
+                return true;
+            }
+        };
+
+        /**
+         * Trust every server - don't check for any certificate
+         */
+        private static void trustAllHosts() {
+            // Create a trust manager that does not validate certificate chains
+            TrustManager[] trustAllCerts = new TrustManager[] { new X509TrustManager() {
+                public java.security.cert.X509Certificate[] getAcceptedIssuers() {
+                    return new java.security.cert.X509Certificate[] {};
+                }
+
+                @Override
+                public void checkClientTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
+
+                @Override
+                public void checkServerTrusted(X509Certificate[] chain,
+                                               String authType) throws CertificateException {
+                }
+            }};
+
+            // Install the all-trusting trust manager
+            try {
+                SSLContext sc = SSLContext.getInstance("TLS");
+                sc.init(null, trustAllCerts, new java.security.SecureRandom());
+                HttpsURLConnection.setDefaultSSLSocketFactory(sc.getSocketFactory());
+            }
+            catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+
+        public static HttpsURLConnection postHttps(String url, int connTimeout, int readTimeout) {
+            trustAllHosts();
+
+            HttpsURLConnection https = null;
+            try {
+                https = (HttpsURLConnection) new URL(url).openConnection();
+                https.setHostnameVerifier(DO_NOT_VERIFY);
+                https.setConnectTimeout(connTimeout);
+                https.setReadTimeout(readTimeout);
+            }
+            catch (MalformedURLException e) {
+                e.printStackTrace();
+                return null;
+            }
+            catch (IOException e) {
+                e.printStackTrace();
+                return null;
+            }
+
+            return https;
+        }
+    }
+
 
 
 }

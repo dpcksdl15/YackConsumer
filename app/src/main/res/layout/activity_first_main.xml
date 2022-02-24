@@ -101,11 +101,15 @@
                                 android:id="@+id/covid_dayCount"
                                 android:layout_width="match_parent"
                                 android:layout_height="50dp"
+                                android:paddingRight="10dp"
+                                android:paddingLeft="10dp"
                                 android:textAlignment="center"
                                 android:gravity="center"
                                 android:textColor="#067bfe"
                                 android:fontFamily="@font/neb"
-                                android:textSize="22sp"
+                                android:autoSizeTextType="uniform"
+                                android:autoSizeMaxTextSize="22sp"
+                                android:maxLines="1"
                                 android:text="5,805"/>
                         </LinearLayout>
 
@@ -261,6 +265,23 @@
             />
 
     </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="20dp"
+                    android:layout_weight="2"
+                    >
+
+                    <ImageView
+                        android:id="@+id/bt_first_main_button_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="151dp"
+                        android:src="@drawable/d"
+                        android:scaleType="fitXY"
+                        />
+
+                </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"

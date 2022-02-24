@@ -217,6 +217,9 @@ public class MdSearchResultActivity extends AppCompatActivity {
                                 xpp.next();
                                 eat_warmming1 = eat_warmming1 + xpp.getText().replace("<p>", "");
                                 eat_warmming1 = eat_warmming1.replace("</p>", "\n");
+                                if (eat_warmming1.equals("null")){
+                                    eat_warmming1 ="";
+                                }
                             }catch (Exception e){
 
                             }

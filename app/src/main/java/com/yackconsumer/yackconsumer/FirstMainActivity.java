@@ -34,7 +34,7 @@ public class FirstMainActivity extends AppCompatActivity {
 
     ViewPager2 viewPager;
 
-    ImageView bt_button1, bt_button2;
+    ImageView bt_button1, bt_button2, bt_button3;
 
     TextView tv_service, tv_data;
 
@@ -50,6 +50,9 @@ public class FirstMainActivity extends AppCompatActivity {
 
     Intent intent;
 
+    int image[] = {R.drawable.main_baaner_1, R.drawable.main_banner_2, R.drawable.main_banner_3};
+
+    Viewpager2Adapter viewpager2Adapter;
 
     //코로나 현황판
     TextView covid_time, covid_dayCount, covid_sumCount, covid_dayDeath,covid_sumDeath;
@@ -69,10 +72,6 @@ public class FirstMainActivity extends AppCompatActivity {
     String nowDate, beforeDate, toDate;
 
 
-    int image[] = {R.drawable.main_baaner_1, R.drawable.main_banner_2, R.drawable.main_banner_3};
-
-    Viewpager2Adapter viewpager2Adapter;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -80,6 +79,7 @@ public class FirstMainActivity extends AppCompatActivity {
 
         bt_button1 = findViewById(R.id.bt_first_main_button_1);
         bt_button2 = findViewById(R.id.bt_first_main_button_2);
+        bt_button3 = findViewById(R.id.bt_first_main_button_3);
 
         tv_service = findViewById(R.id.tv_service);
         tv_data = findViewById(R.id.tv_data);
@@ -117,6 +117,11 @@ public class FirstMainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    case R.id.bt_first_main_button_3:
+                        intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
+                        startActivity(intent);
+                        break;
+
                     case R.id.tv_service:
                         timer.cancel();
                         intent = new Intent(getApplicationContext(), ProvisionActivity.class);
@@ -134,6 +139,7 @@ public class FirstMainActivity extends AppCompatActivity {
         };
         bt_button1.setOnClickListener(cl);
         bt_button2.setOnClickListener(cl);
+        bt_button3.setOnClickListener(cl);
         tv_service.setOnClickListener(cl);
         tv_data.setOnClickListener(cl);
 
@@ -190,6 +196,7 @@ public class FirstMainActivity extends AppCompatActivity {
     }
 
     public void today_date(int i){
+
         //오늘 날짜 구하기
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyyMMdd");
         Calendar calendar = Calendar.getInstance();
@@ -238,7 +245,7 @@ public class FirstMainActivity extends AppCompatActivity {
             xpp.next();
 
             String tagName;
-            int count = 0;
+
 
             int eventType= xpp.getEventType();
 
@@ -259,7 +266,7 @@ public class FirstMainActivity extends AppCompatActivity {
                             else if (tagName.equals("decideCnt")){
                             xpp.next();
                             decideCntLsit.add(Integer.parseInt(xpp.getText()));
-                            Log.d("tagname", xpp.getText());
+                            Log.d("decideCnt", xpp.getText());
 
                         }
 
@@ -303,13 +310,21 @@ public class FirstMainActivity extends AppCompatActivity {
 
             Log.d("확인", String.valueOf(startDt));
 
-
             covid_dayCount.setText(String.valueOf(startDt-endDt));
             covid_sumCount.setText(String.valueOf(startDt));
             covid_dayDeath.setText(String.valueOf(startDeathDt-endDeathDt));
             covid_sumDeath.setText(String.valueOf(startDeathDt));
+
+            if (startDt-endDt == 0){
+                decideCntLsit.clear();
+                deathCntList.clear();
+                today_date(3);
+            }
+
         } catch (Exception e){
+
             today_date(1);
+            Log.d("확인", "리턴");
         }
 
 
