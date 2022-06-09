@@ -65,9 +65,9 @@ public class MdSearchActivity extends AppCompatActivity {
     ArrayList<String> list2 = new ArrayList<>();
     //업체명
     ArrayList<String> list3 = new ArrayList<>();
-    //이미지
+    //이미지 사진
     ArrayList<Bitmap> list4 = new ArrayList<>();
-    //이미지
+    //이미지 url
     ArrayList<String> list5 = new ArrayList<>();
 
     String key="%2FRj6PnwSChD5W2Md24QgSzON59%2FhVEEUaGNz6Wqatzinv3ynhtlm6Wj5ltMVE3pywr3aDojSz8%2BMNCTzeKbMzg%3D%3D";
@@ -124,14 +124,17 @@ public class MdSearchActivity extends AppCompatActivity {
             public void onItemSelected(View v, int position) {
                 Intent intent = new Intent(MdSearchActivity.this, MdSearchResultActivity.class);
 
-                Bitmap img = list4.get(position);
+                if (list4.size() != 0 && list4.get(position) != null) {
+                    Bitmap img = list4.get(position);
+                    ByteArrayOutputStream stream = new ByteArrayOutputStream();
+                    img.compress(Bitmap.CompressFormat.JPEG, 100, stream);
 
-                ByteArrayOutputStream stream = new ByteArrayOutputStream();
-                img.compress(Bitmap.CompressFormat.JPEG, 100, stream);
+                    byte[] byteArray = stream.toByteArray();
 
-                byte[] byteArray = stream.toByteArray();
+                    intent.putExtra("image",byteArray);
+                }
 
-                intent.putExtra("image",byteArray);
+
                 intent.putExtra("name", list2.get(position));
                 intent.putExtra("code", list.get(position));
 
@@ -303,7 +306,7 @@ public class MdSearchActivity extends AppCompatActivity {
 
         try {
             for (int i =0 ; list.size() > i ; i++) {
-                queryUrl3 = "http://apis.data.go.kr/1470000/MdcinGrnIdntfcInfoService/getMdcinGrnIdntfcInfoList?serviceKey=" + key + "&item_seq=" + list.get(i);
+                queryUrl3 = "http://apis.data.go.kr/1471000/DrbEasyDrugInfoService/getDrbEasyDrugList?serviceKey=" + key + "&itemSeq=" + list.get(i);
                 url2 = new URL(queryUrl3);
                 Log.d("확인", queryUrl3);
 
@@ -333,10 +336,15 @@ public class MdSearchActivity extends AppCompatActivity {
 
 
                             if (tag.equals("item")) ;
-                            else if (tag.equals("ITEM_IMAGE")) {
+                            else if (tag.equals("itemImage")) {
                                 xpp.next();
-                                Log.d("확인", xpp.getText());
-                                list5.add(xpp.getText());
+
+                                if (xpp.getText() != null) {
+                                    Log.d("확인", xpp.getText());
+                                    list5.add(xpp.getText());
+                                } else {
+                                    list5.add(null);
+                                }
                             }
 
                         case XmlPullParser.TEXT:
@@ -368,32 +376,41 @@ public class MdSearchActivity extends AppCompatActivity {
     }
 
     private Bitmap getBitmap(String url) {
-        Log.d("확인url", url);
-        URL imgUrl = null;
 
         HttpURLConnection connection = null;
         InputStream is = null;
         Bitmap retBitmap = null;
 
-        try{
-            postHttps(url, 100, 100);
-            imgUrl = new URL(url);
-            connection = (HttpURLConnection) imgUrl.openConnection();
-            connection.setDoInput(true);
+        if (url != null) {
 
-            connection.connect();
+            Log.d("확인url", url);
+            URL imgUrl = null;
 
-            is = connection.getInputStream();
-            retBitmap = BitmapFactory.decodeStream(is);
-        }catch(Exception e) {
-            e.printStackTrace(); return null;
-        }finally {
-            if(connection!=null) {
-                connection.disconnect();
+            try {
+                postHttps(url, 100, 100);
+                imgUrl = new URL(url);
+                connection = (HttpURLConnection) imgUrl.openConnection();
+                connection.setDoInput(true);
+
+                connection.connect();
+
+                is = connection.getInputStream();
+                retBitmap = BitmapFactory.decodeStream(is);
+            } catch (Exception e) {
+                e.printStackTrace();
+                return null;
+            } finally {
+                if (connection != null) {
+                    connection.disconnect();
+                }
+                return retBitmap;
+
             }
-            return retBitmap;
+        } else {
 
+            return null;
         }
+
     }
 
     //웹서비스 요청시 SSL 인증서 에러 방지

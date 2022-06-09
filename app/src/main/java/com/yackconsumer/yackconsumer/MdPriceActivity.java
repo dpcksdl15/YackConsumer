@@ -146,103 +146,103 @@ public class MdPriceActivity extends AppCompatActivity {
 
                     if (Integer.parseInt(cursor1.getString(5)) == 1) {
 
-                        total_sum(total, total2, 5290);
+                        total_sum(total, total2, 5480);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 2) {
 
-                        total_sum(total, total2, 5490);
+                        total_sum(total, total2, 5690);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 3) {
 
-                        total_sum(total, total2, 6040);
+                        total_sum(total, total2, 6260);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 4) {
 
-                        total_sum(total, total2, 6340);
+                        total_sum(total, total2, 6950);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 5) {
 
-                        total_sum(total, total2, 6710);
+                        total_sum(total, total2, 6950);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 6) {
 
-                        total_sum(total, total2, 7010);
+                        total_sum(total, total2, 7260);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 7) {
 
-                        total_sum(total, total2, 7450);
+                        total_sum(total, total2, 7720);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 8) {
 
-                        total_sum(total, total2, 7650);
+                        total_sum(total, total2, 7920);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 9) {
 
-                        total_sum(total, total2, 7880);
+                        total_sum(total, total2, 8150);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 10) {
 
-                        total_sum(total, total2, 8220);
+                        total_sum(total, total2, 8520);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 11) {
 
-                        total_sum(total, total2, 8490);
+                        total_sum(total, total2, 8790);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 12) {
 
-                        total_sum(total, total2, 8750);
+                        total_sum(total, total2, 9060);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 13) {
 
-                        total_sum(total, total2, 9010);
+                        total_sum(total, total2, 9330);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 14) {
 
-                        total_sum(total, total2, 9860);
+                        total_sum(total, total2, 10210);
 
                     } else if (Integer.parseInt(cursor1.getString(5)) == 15) {
 
-                        total_sum(total, total2, 9980);
+                        total_sum(total, total2, 10340);
 
                     } else if (15 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 21) {
 
-                        total_sum(total, total2, 10700);
+                        total_sum(total, total2, 11080);
 
                     } else if (20 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 26) {
 
-                        total_sum(total, total2, 11050);
+                        total_sum(total, total2, 11440);
 
                     } else if (25 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 31) {
 
-                        total_sum(total, total2, 12430);
+                        total_sum(total, total2, 128700);
 
                     } else if (30 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 41) {
 
-                        total_sum(total, total2, 13460);
+                        total_sum(total, total2, 13940);
 
                     } else if (40 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 51) {
 
-                        total_sum(total, total2, 14270);
+                        total_sum(total, total2, 14780);
 
                     } else if (50 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 61) {
 
-                        total_sum(total, total2, 16400);
+                        total_sum(total, total2, 16990);
 
                     } else if (60 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 71) {
 
-                        total_sum(total, total2, 16850);
+                        total_sum(total, total2, 17450);
 
                     } else if (70 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 81) {
 
-                        total_sum(total, total2, 17240);
+                        total_sum(total, total2, 17860);
 
                     } else if (80 < Integer.parseInt(cursor1.getString(5)) && Integer.parseInt(cursor1.getString(5)) < 91) {
 
-                        total_sum(total, total2, 17620);
+                        total_sum(total, total2, 18260);
 
                     } else if (90 < Integer.parseInt(cursor1.getString(5))) {
 
-                        total_sum(total, total2, 18080);
+                        total_sum(total, total2, 180730);
 
                     }
 

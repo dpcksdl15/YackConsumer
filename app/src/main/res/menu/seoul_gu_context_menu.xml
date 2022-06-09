@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/seoul1"
+        android:title="강남구" />
+    <item
+        android:id="@+id/seoul2"
+        android:title="강동구" />
+    <item
+        android:id="@+id/seoul3"
+        android:title="강북구" />
+    <item
+        android:id="@+id/seoul4"
+        android:title="강서구" />
+    <item
+        android:id="@+id/seoul5"
+        android:title="관악구" />
+    <item
+        android:id="@+id/seoul6"
+        android:title="광진구" />
+    <item
+        android:id="@+id/seoul7"
+        android:title="구로구" />
+    <item
+        android:id="@+id/seoul8"
+        android:title="금천구" />
+    <item
+        android:id="@+id/seoul9"
+        android:title="노원구" />
+    <item
+        android:id="@+id/seoul10"
+        android:title="도봉구" />
+    <item
+        android:id="@+id/seoul11"
+        android:title="동대문구" />
+    <item
+        android:id="@+id/seoul12"
+        android:title="동작구" />
+    <item
+        android:id="@+id/seoul13"
+        android:title="마포구" />
+    <item
+        android:id="@+id/seoul14"
+        android:title="서대문구" />
+    <item
+        android:id="@+id/seoul15"
+        android:title="서초구" />
+    <item
+        android:id="@+id/seoul16"
+        android:title="성동구" />
+    <item
+        android:id="@+id/seoul17"
+        android:title="성북구" />
+    <item
+        android:id="@+id/seoul18"
+        android:title="송파구" />
+    <item
+        android:id="@+id/seoul19"
+        android:title="양천구" />
+    <item
+        android:id="@+id/seoul20"
+        android:title="영등포구" />
+    <item
+        android:id="@+id/seoul21"
+        android:title="용산구" />
+    <item
+        android:id="@+id/seoul22"
+        android:title="은평구" />
+    <item
+        android:id="@+id/seoul23"
+        android:title="종로구" />
+    <item
+        android:id="@+id/seoul24"
+        android:title="중구" />
+    <item
+        android:id="@+id/seoul25"
+        android:title="중랑구" />
+
+
+</menu>

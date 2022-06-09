@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chungnam1"
+        android:title="계롱시" />
+    <item
+        android:id="@+id/chungnam2"
+        android:title="공주시" />
+    <item
+        android:id="@+id/chungnam3"
+        android:title="금산군" />
+    <item
+        android:id="@+id/chungnam4"
+        android:title="논산시" />
+    <item
+        android:id="@+id/chungnam5"
+        android:title="당진시" />
+    <item
+        android:id="@+id/chungnam6"
+        android:title="보령시" />
+    <item
+        android:id="@+id/chungnam7"
+        android:title="부여군" />
+    <item
+        android:id="@+id/chungnam8"
+        android:title="서산시" />
+    <item
+        android:id="@+id/chungnam9"
+        android:title="서천군" />
+    <item
+        android:id="@+id/chungnam10"
+        android:title="아산시" />
+    <item
+        android:id="@+id/chungnam11"
+        android:title="예산군" />
+    <item
+        android:id="@+id/chungnam12"
+        android:title="천안시" />
+    <item
+        android:id="@+id/chungnam13"
+        android:title="청양군" />
+    <item
+        android:id="@+id/chungnam14"
+        android:title="태안군" />
+    <item
+        android:id="@+id/chungnam15"
+        android:title="홍성군" />
+
+</menu>

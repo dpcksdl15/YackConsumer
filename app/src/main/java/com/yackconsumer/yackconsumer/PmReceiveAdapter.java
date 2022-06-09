@@ -20,6 +20,7 @@ public class PmReceiveAdapter extends RecyclerView.Adapter<PmReceiveAdapter.View
     private ArrayList<String> list1 = null;
     private ArrayList<String> list2 = null;
     private ArrayList<Integer> list3 = null;
+    private ArrayList<Integer> list4 = null;
 
 
     private OnListItemSelectedInterface mListener = null;
@@ -51,10 +52,11 @@ public class PmReceiveAdapter extends RecyclerView.Adapter<PmReceiveAdapter.View
         }
     }
 
-    PmReceiveAdapter(ArrayList<String> list1, ArrayList<String> list2, ArrayList<Integer> list3){
+    PmReceiveAdapter(ArrayList<String> list1, ArrayList<String> list2, ArrayList<Integer> list3, ArrayList<Integer> list4){
         this.list1 = list1;
         this.list2 = list2;
         this.list3 = list3;
+        this.list4 = list4;
     }
 
     @NonNull

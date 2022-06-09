@@ -36,6 +36,9 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_date_seq.xml" value="0.23385416666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_first_main_button.xml" value="0.17447916666666666" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_first_main_top.xml" value="0.2994791666666667" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_login_button.xml" value="0.378125" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_login_button_b.xml" value="0.23072916666666668" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_login_text.xml" value="0.378125" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_main_covid.xml" value="0.1828125" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/background_mdprice_recyclerview.xml" value="0.21822916666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/bottom_icon_select_color.xml" value="0.38229166666666664" />
@@ -44,13 +47,17 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/dotted_line_horizontal.xml" value="0.5" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/md_price_result_list.xml" value="0.38229166666666664" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/md_price_search_text.xml" value="0.38229166666666664" />
-        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_first_main.xml" value="0.33" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/drawable/outline_chevron_right_24.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_first_main.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_loding.xml" value="0.3619791666666667" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_login.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_main.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_price.xml" value="0.33" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_price_result.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_search.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_md_search_result.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_membership.xml" value="0.25" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_membership_finsh.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_pm_receive.xml" value="0.33" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_pm_receive_detail.xml" value="0.25" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/activity_provision.xml" value="0.36614583333333334" />
@@ -62,12 +69,35 @@
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/fragment_alram_add.xml" value="0.5" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/fragment_main.xml" value="0.22" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/main_md_price_recycler_list.xml" value="0.67" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/main_navi_header.xml" value="0.22" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/main_navi_header2.xml" value="0.20520833333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/md_search_main_recycler_list.xml" value="0.36614583333333334" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/pm_receive_detail_list.xml" value="0.22083333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/pm_recevie_list.xml" value="0.25885416666666666" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/pmrecive_detail_list.xml" value="0.21145833333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/sub_md_price_recycler_list.xml" value="0.15833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/layout/viewpage.xml" value="0.2833333333333333" />
         <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/bottom_menu.xml" value="0.36614583333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/busan_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/chungbuk_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/chungnam_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/deagu_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/deajen_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/do_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/gangwon_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/gwangju_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/gyeongbuk_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/gyeonggi_gu_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/gyeongnam_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/incheon_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/jeju_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/jeonbuk_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/jeonnam_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/main_navi_menu.xml" value="0.20833333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/main_navi_menu2.xml" value="0.20520833333333333" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/sejoeng_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/seoul_gu_context_menu.xml" value="0.20208333333333334" />
+        <entry key="..\:/Users/eu101/AndroidStudioProjects/YackConsumer/app/src/main/res/menu/ulsan_context_menu.xml" value="0.20208333333333334" />
       </map>
     </option>
   </component>

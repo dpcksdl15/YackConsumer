@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gongbuk1"
+        android:title="경산시" />
+    <item
+        android:id="@+id/gongbuk2"
+        android:title="경주시" />
+    <item
+        android:id="@+id/gongbuk3"
+        android:title="고령군" />
+    <item
+        android:id="@+id/gongbuk4"
+        android:title="구미시" />
+    <item
+        android:id="@+id/gongbuk5"
+        android:title="군위군" />
+    <item
+        android:id="@+id/gongbuk6"
+        android:title="김천시" />
+    <item
+        android:id="@+id/gongbuk7"
+        android:title="문경시" />
+    <item
+        android:id="@+id/gongbuk8"
+        android:title="봉화군" />
+    <item
+        android:id="@+id/gongbuk9"
+        android:title="상주시" />
+    <item
+        android:id="@+id/gongbuk10"
+        android:title="성주군" />
+    <item
+        android:id="@+id/gongbuk11"
+        android:title="안동시" />
+    <item
+        android:id="@+id/gongbuk12"
+        android:title="영덕군" />
+    <item
+        android:id="@+id/gongbuk13"
+        android:title="영양군" />
+    <item
+        android:id="@+id/gongbuk14"
+        android:title="영주시" />
+    <item
+        android:id="@+id/gongbuk15"
+        android:title="영천시" />
+    <item
+        android:id="@+id/gongbuk16"
+        android:title="예천군" />
+    <item
+        android:id="@+id/gongbuk17"
+        android:title="울릉군" />
+    <item
+        android:id="@+id/gongbuk18"
+        android:title="울진군" />
+    <item
+        android:id="@+id/gongbuk19"
+        android:title="의성군" />
+    <item
+        android:id="@+id/gongbuk20"
+        android:title="청도군" />
+    <item
+        android:id="@+id/gongbuk21"
+        android:title="청송군" />
+    <item
+        android:id="@+id/gongbuk22"
+        android:title="칠곡군" />
+    <item
+        android:id="@+id/gongbuk23"
+        android:title="포항시" />
+
+</menu>

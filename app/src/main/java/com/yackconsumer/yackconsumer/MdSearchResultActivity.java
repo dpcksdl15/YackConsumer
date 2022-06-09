@@ -43,6 +43,8 @@ public class MdSearchResultActivity extends AppCompatActivity {
 
     int content_check1 =0 , content_check2 =0;
 
+    Bitmap image;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -122,8 +124,9 @@ public class MdSearchResultActivity extends AppCompatActivity {
         code = intent.getExtras().getString("code");
         name = intent.getExtras().getString("name");
         byte[] arr = getIntent().getByteArrayExtra("image");
-        Bitmap image = BitmapFactory.decodeByteArray(arr, 0, arr.length);
-
+        if (arr != null) {
+            image = BitmapFactory.decodeByteArray(arr, 0, arr.length);
+        }
         new Thread(){
             @Override
             public void run() {
@@ -133,7 +136,11 @@ public class MdSearchResultActivity extends AppCompatActivity {
                 runOnUiThread(new Runnable() {
                     @Override
                     public void run() {
-                        imgv.setImageBitmap(image);
+                        if (arr != null) {
+                            imgv.setImageBitmap(image);
+                        } else {
+                            imgv.setImageResource(R.drawable.mdsearch_noresult);
+                        }
                         tv_search_name.setText(name);
                         tv_search_name2.setText(name);
                         tv_search_md_content1.setText(eat_plan);

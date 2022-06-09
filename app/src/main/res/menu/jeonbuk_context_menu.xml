@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/jeonbuk1"
+        android:title="고창군" />
+    <item
+        android:id="@+id/jeonbuk2"
+        android:title="군산시" />
+    <item
+        android:id="@+id/jeonbuk3"
+        android:title="김제시" />
+    <item
+        android:id="@+id/jeonbuk4"
+        android:title="남원시" />
+    <item
+        android:id="@+id/jeonbuk5"
+        android:title="무주군" />
+    <item
+        android:id="@+id/jeonbuk6"
+        android:title="부안군" />
+    <item
+        android:id="@+id/jeonbuk7"
+        android:title="순창군" />
+    <item
+        android:id="@+id/jeonbuk8"
+        android:title="완주군" />
+    <item
+        android:id="@+id/jeonbuk9"
+        android:title="익산시" />
+    <item
+        android:id="@+id/jeonbuk10"
+        android:title="임실군" />
+    <item
+        android:id="@+id/jeonbuk11"
+        android:title="장수군" />
+    <item
+        android:id="@+id/jeonbuk12"
+        android:title="전주시" />
+    <item
+        android:id="@+id/jeonbuk13"
+        android:title="정읍시" />
+    <item
+        android:id="@+id/jeonbuk14"
+        android:title="진안군" />
+
+</menu>

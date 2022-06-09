@@ -95,15 +95,25 @@ public class MdSearchAdpter extends RecyclerView.Adapter<MdSearchAdpter.ViewHold
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, @SuppressLint("RecyclerView") int position) {
-        String text = mlist.get(position);
-        String text2 = mlist2.get(position);
-        String text3 = mlist3.get(position);
-        Bitmap bitmap = mlist4.get(position);
 
-        holder.tv_md_name.setText(text2);
-        holder.tv_md_code.setText(text);
-        holder.tv_md_comp.setText(text3);
-        holder.imageView.setImageBitmap(bitmap);
+            String text = mlist.get(position);
+            String text2 = mlist2.get(position);
+            String text3 = mlist3.get(position);
+            Bitmap bitmap;
+
+            if (mlist4.size() != 0) {
+                if (mlist4.get(position) != null){
+                    bitmap = mlist4.get(position);
+                    holder.imageView.setImageBitmap(bitmap);
+                } else {
+                    holder.imageView.setImageResource(R.drawable.mdsearch_noresult);
+                }
+
+
+            }
+            holder.tv_md_name.setText(text2);
+            holder.tv_md_code.setText(text);
+            holder.tv_md_comp.setText(text3);
 
     }
 

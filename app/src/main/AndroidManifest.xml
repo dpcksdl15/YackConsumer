@@ -3,6 +3,8 @@
     package="com.yackconsumer.yackconsumer">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
@@ -13,6 +15,17 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.YackConsumer"
         android:usesCleartextTraffic="true">
+        <activity
+            android:name=".MembershipFinshActivity"
+            android:exported="true" />
+        <activity
+            android:name=".MembershipActivity"
+            android:exported="true">
+
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:exported="true" />
         <activity
             android:name=".PmReceiveDetailActivity"
             android:exported="true" />

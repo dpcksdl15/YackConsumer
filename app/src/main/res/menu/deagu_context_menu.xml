@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/deagu1"
+        android:title="남구" />
+    <item
+        android:id="@+id/deagu2"
+        android:title="달서구" />
+    <item
+        android:id="@+id/deagu3"
+        android:title="달성군" />
+    <item
+        android:id="@+id/deagu4"
+        android:title="동구" />
+    <item
+        android:id="@+id/deagu5"
+        android:title="북구" />
+    <item
+        android:id="@+id/deagu6"
+        android:title="서구" />
+    <item
+        android:id="@+id/deagu7"
+        android:title="수성구" />
+    <item
+        android:id="@+id/deagu8"
+        android:title="중구" />
+
+</menu>

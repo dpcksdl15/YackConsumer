@@ -1,0 +1,597 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="10dp"
+    tools:context=".MembershipActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:text="회원가입"
+        android:textSize="16sp"
+        android:fontFamily="@font/nr"
+        android:textColor="@color/black"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="51dp"
+        android:text="아이디"
+        android:textSize="12sp"
+        android:fontFamily="@font/nr"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <EditText
+        android:id="@+id/et_id"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:paddingLeft="10dp"
+        android:background="@drawable/background_login_text"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:hint="아이디를 입력해주세요!"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/bt_idCheck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <Button
+        android:id="@+id/bt_idCheck"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:text="중복확인"
+        android:textColor="@color/white"
+        android:fontFamily="@font/nb"
+        android:textSize="12sp"
+        android:background="@drawable/backgound_md_price_search_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView8" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nr"
+        android:text="비밀번호"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_id" />
+
+    <EditText
+        android:id="@+id/et_pw"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login_text"
+        android:ems="10"
+        android:hint="비밀번호를 입력해주세요!"
+        android:inputType="textPassword"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="8dp"
+        android:text="영문, 숫자, 특수문자 포함 8자리를 입력해주세요."
+        android:textSize="10sp"
+        android:fontFamily="@font/nr"
+        android:textColor="#61000000"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_pw" />
+
+    <EditText
+        android:id="@+id/et_repw"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login_text"
+        android:paddingLeft="10sp"
+        android:ems="10"
+        android:inputType="textPassword"
+        android:hint="비밀번호를 한번 더 입력해주세요!"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nr"
+        android:text="이름"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_repw" />
+
+    <EditText
+        android:id="@+id/et_name"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login_text"
+        android:ems="10"
+        android:hint="이름을 입력해주세요!"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nr"
+        android:text="생년월일"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_name" />
+
+    <EditText
+        android:id="@+id/et_y"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background_login_text"
+        android:hint="년(4자)"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_m"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/et_m"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@drawable/background_login_text"
+        android:hint="월(2자)"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toStartOf="@+id/et_d"
+        app:layout_constraintStart_toEndOf="@+id/et_y"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <EditText
+        android:id="@+id/et_d"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login_text"
+        android:hint="일(2자)"
+        android:inputType="number"
+        android:paddingLeft="10dp"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/et_m"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+        <TextView
+            android:id="@+id/textView24"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/nr"
+            android:text="휴대폰 번호"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_y" />
+
+        <EditText
+            android:id="@+id/et_phnf"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background_login_text"
+            android:hint="010"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_m"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <EditText
+            android:id="@+id/et_phnm"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background_login_text"
+            android:hint="0000"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/et_phnl"
+            app:layout_constraintStart_toEndOf="@+id/et_phnf"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+        <EditText
+            android:id="@+id/et_phnl"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_login_text"
+            android:hint="0000"
+            android:inputType="number"
+            android:paddingLeft="10dp"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/et_phnm"
+            app:layout_constraintTop_toBottomOf="@+id/textView24" />
+
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="32dp"
+        android:fontFamily="@font/nr"
+        android:text="지역"
+        android:textColor="@color/black"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/et_phnf" />
+
+        <TextView
+            android:id="@+id/select_do"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background_login_text"
+            android:gravity="center"
+            android:hint="도"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/select_si"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+    <TextView
+        android:id="@+id/select_si"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="20dp"
+        android:background="@drawable/background_login_text"
+        android:hint="시"
+        android:textColor="@color/black"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/select_do"
+        app:layout_constraintTop_toBottomOf="@+id/textView13" />
+
+<!--    <TextView-->
+<!--        android:id="@+id/textView14"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="32dp"-->
+<!--        android:fontFamily="@font/nr"-->
+<!--        android:text="주소"-->
+<!--        android:textColor="@color/black"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName8" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextTextPersonName10"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="10dp"-->
+<!--        android:background="@drawable/background_login_text"-->
+<!--        android:ems="10"-->
+<!--        android:hint="도로명, 지번, 건물명 검색"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintEnd_toStartOf="@+id/button3"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView14" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button3"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/backgound_md_price_search_button"-->
+<!--        android:fontFamily="@font/nb"-->
+<!--        android:text="우편번호 찾기"-->
+<!--        android:textColor="@color/white"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/textView14" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/editTextTextPersonName11"-->
+<!--        android:layout_width="0dp"-->
+<!--        android:layout_height="36dp"-->
+<!--        android:layout_marginStart="20dp"-->
+<!--        android:layout_marginTop="10dp"-->
+<!--        android:layout_marginEnd="20dp"-->
+<!--        android:background="@drawable/background_login_text"-->
+<!--        android:ems="10"-->
+<!--        android:hint="상세주소를 입력해주세요!"-->
+<!--        android:inputType="textPersonName"-->
+<!--        android:paddingLeft="10dp"-->
+<!--        android:textSize="12sp"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName10" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView15"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="32dp"-->
+<!--            android:fontFamily="@font/nr"-->
+<!--            android:text="이메일(선택)"-->
+<!--            android:textColor="@color/black"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName11" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextTextPersonName12"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginStart="20dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/background_login_text"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/textView16"-->
+<!--            app:layout_constraintStart_toStartOf="parent"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+<!--        <EditText-->
+<!--            android:id="@+id/editTextTextPersonName13"-->
+<!--            android:layout_width="0dp"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:background="@drawable/background_login_text"-->
+<!--            android:ems="10"-->
+<!--            android:inputType="textPersonName"-->
+<!--            android:paddingLeft="10dp"-->
+<!--            android:textSize="12sp"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/textView17"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/textView16"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView16"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="20dp"-->
+<!--            android:layout_marginEnd="10dp"-->
+<!--            android:text="\@"-->
+<!--            app:layout_constraintEnd_toStartOf="@+id/editTextTextPersonName13"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName12"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView15" />-->
+
+<!--        <TextView-->
+<!--            android:id="@+id/textView17"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="36dp"-->
+<!--            android:layout_marginStart="10dp"-->
+<!--            android:layout_marginTop="10dp"-->
+<!--            android:layout_marginEnd="20dp"-->
+<!--            android:padding="10dp"-->
+<!--            android:gravity="center"-->
+<!--            android:text="선택입력"-->
+<!--            android:textSize="12sp"-->
+<!--            android:fontFamily="@font/nr"-->
+<!--            app:layout_constraintEnd_toEndOf="parent"-->
+<!--            app:layout_constraintStart_toEndOf="@+id/editTextTextPersonName13"-->
+<!--            app:layout_constraintTop_toBottomOf="@+id/textView15"-->
+<!--            android:background="@drawable/background_login_text"/>-->
+
+        <CheckBox
+            android:id="@+id/ckb_all"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:text="약관 전체동의"
+            android:buttonTint="#ff067bfe"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/select_do" />
+
+        <LinearLayout
+            android:id="@+id/line1"
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/dotted_line_horizontal"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ckb_all"
+            tools:ignore="MissingConstraints,Orientation" />
+
+        <LinearLayout
+            android:id="@+id/check1"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/line1">
+
+            <CheckBox
+                android:id="@+id/ckb1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="약있소 이용약관 동의"
+                android:buttonTint="#ff067bfe"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView18"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nb"
+                android:text="(필수)"
+                android:textColor="#067bfe"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_provision"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="내용보기"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/check2"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check1">
+
+            <CheckBox
+                android:id="@+id/ckb2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="개인정보 수집 및 동의"
+                android:buttonTint="#ff067bfe"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView19"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nb"
+                android:text="(필수)"
+                android:textColor="#067bfe"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_provision2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="내용보기"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/bt_memberinfo_enter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="20dp"
+            android:text="가 입 하 기"
+            android:textColor="@color/white"
+            android:fontFamily="@font/neb"
+            android:textSize="14sp"
+            android:background="@drawable/backgound_md_price_search_button"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check2" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

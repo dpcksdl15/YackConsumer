@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/deajen1"
+        android:title="대덕구" />
+    <item
+        android:id="@+id/deajen2"
+        android:title="동구" />
+    <item
+        android:id="@+id/deajen3"
+        android:title="서구" />
+    <item
+        android:id="@+id/deajen4"
+        android:title="유성구" />
+    <item
+        android:id="@+id/deajen5"
+        android:title="중구" />
+
+</menu>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/chungbuk1"
+        android:title="괴산군" />
+    <item
+        android:id="@+id/chungbuk2"
+        android:title="단양군" />
+    <item
+        android:id="@+id/chungbuk3"
+        android:title="보은군" />
+    <item
+        android:id="@+id/chungbuk4"
+        android:title="영동군" />
+    <item
+        android:id="@+id/chungbuk5"
+        android:title="옥천군" />
+    <item
+        android:id="@+id/chungbuk6"
+        android:title="음성군" />
+    <item
+        android:id="@+id/chungbuk7"
+        android:title="제천시" />
+    <item
+        android:id="@+id/chungbuk8"
+        android:title="증평군" />
+    <item
+        android:id="@+id/chungbuk9"
+        android:title="진천군" />
+    <item
+        android:id="@+id/chungbuk10"
+        android:title="청주시" />
+    <item
+        android:id="@+id/chungbuk11"
+        android:title="충주시" />
+
+</menu>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gyeongnam1"
+        android:title="거제시" />
+    <item
+        android:id="@+id/gyeongnam2"
+        android:title="거창군" />
+    <item
+        android:id="@+id/gyeongnam3"
+        android:title="고성군" />
+    <item
+        android:id="@+id/gyeongnam4"
+        android:title="김해시" />
+    <item
+        android:id="@+id/gyeongnam5"
+        android:title="남해군" />
+    <item
+        android:id="@+id/gyeongnam6"
+        android:title="밀양시" />
+    <item
+        android:id="@+id/gyeongnam7"
+        android:title="사천시" />
+    <item
+        android:id="@+id/gyeongnam8"
+        android:title="산청군" />
+    <item
+        android:id="@+id/gyeongnam9"
+        android:title="양산시" />
+    <item
+        android:id="@+id/gyeongnam10"
+        android:title="의령군" />
+    <item
+        android:id="@+id/gyeongnam11"
+        android:title="진주시" />
+    <item
+        android:id="@+id/gyeongnam12"
+        android:title="창녕군" />
+    <item
+        android:id="@+id/gyeongnam13"
+        android:title="창원시" />
+    <item
+        android:id="@+id/gyeongnam14"
+        android:title="통영시" />
+    <item
+        android:id="@+id/gyeongnam15"
+        android:title="하동군" />
+    <item
+        android:id="@+id/gyeongnam16"
+        android:title="함안군" />
+    <item
+        android:id="@+id/gyeongnam17"
+        android:title="함양군" />
+    <item
+        android:id="@+id/gyeongnam18"
+        android:title="합천군" />
+
+</menu>

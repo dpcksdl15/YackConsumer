@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gangwon1"
+        android:title="강릉시" />
+    <item
+        android:id="@+id/gangwon2"
+        android:title="고성군" />
+    <item
+        android:id="@+id/gangwon3"
+        android:title="동해시" />
+    <item
+        android:id="@+id/gangwon4"
+        android:title="삼척시" />
+    <item
+        android:id="@+id/gangwon5"
+        android:title="속초시" />
+    <item
+        android:id="@+id/gangwon6"
+        android:title="양구군" />
+    <item
+        android:id="@+id/gangwon7"
+        android:title="양양군" />
+    <item
+        android:id="@+id/gangwon8"
+        android:title="영월군" />
+    <item
+        android:id="@+id/gangwon9"
+        android:title="원주시" />
+    <item
+        android:id="@+id/gangwon10"
+        android:title="인제군" />
+    <item
+        android:id="@+id/gangwon11"
+        android:title="정선군" />
+    <item
+        android:id="@+id/gangwon12"
+        android:title="철원군" />
+    <item
+        android:id="@+id/gangwon13"
+        android:title="춘천시" />
+    <item
+        android:id="@+id/gangwon14"
+        android:title="태백시" />
+    <item
+        android:id="@+id/gangwon15"
+        android:title="평창군" />
+    <item
+        android:id="@+id/gangwon16"
+        android:title="홍천군" />
+    <item
+        android:id="@+id/gangwon17"
+        android:title="화천군" />
+    <item
+        android:id="@+id/gangwon18"
+        android:title="횡선군" />
+
+</menu>

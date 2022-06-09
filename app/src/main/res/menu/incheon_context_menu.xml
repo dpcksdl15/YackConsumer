@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/incheon1"
+        android:title="강화군" />
+    <item
+        android:id="@+id/incheon2"
+        android:title="계양구" />
+    <item
+        android:id="@+id/incheon3"
+        android:title="남동구" />
+    <item
+        android:id="@+id/incheon4"
+        android:title="동구" />
+    <item
+        android:id="@+id/incheon5"
+        android:title="미추홀구" />
+    <item
+        android:id="@+id/incheon6"
+        android:title="부평구" />
+    <item
+        android:id="@+id/incheon7"
+        android:title="서구" />
+    <item
+        android:id="@+id/incheon8"
+        android:title="연수구" />
+    <item
+        android:id="@+id/incheon9"
+        android:title="옹진군" />
+    <item
+        android:id="@+id/incheon10"
+        android:title="중구" />
+
+</menu>

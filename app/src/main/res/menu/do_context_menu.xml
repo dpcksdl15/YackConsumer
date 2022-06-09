@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/do1"
+        android:title="서울특별시" />
+    <item
+        android:id="@+id/do2"
+        android:title="부산광역시" />
+    <item
+        android:id="@+id/do3"
+        android:title="대구광역시" />
+    <item
+        android:id="@+id/do4"
+        android:title="인천광역시" />
+    <item
+        android:id="@+id/do5"
+        android:title="광주광역시" />
+    <item
+        android:id="@+id/do6"
+        android:title="대전광역시" />
+    <item
+        android:id="@+id/do7"
+        android:title="울산광역시" />
+    <item
+        android:id="@+id/do8"
+        android:title="세종시" />
+    <item
+        android:id="@+id/do9"
+        android:title="경기도" />
+    <item
+        android:id="@+id/do10"
+        android:title="강원도" />
+    <item
+        android:id="@+id/do11"
+        android:title="충청북도" />
+    <item
+        android:id="@+id/do12"
+        android:title="충청남도" />
+    <item
+        android:id="@+id/do13"
+        android:title="전라북도" />
+    <item
+        android:id="@+id/do14"
+        android:title="전라남도" />
+    <item
+        android:id="@+id/do15"
+        android:title="경상북도" />
+    <item
+        android:id="@+id/do16"
+        android:title="경상남도" />
+    <item
+        android:id="@+id/do17"
+        android:title="제주도" />
+
+</menu>

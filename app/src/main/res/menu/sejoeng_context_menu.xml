@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/sejoeng1"
+        android:title="고운동" />
+    <item
+        android:id="@+id/sejoeng2"
+        android:title="금남면" />
+    <item
+        android:id="@+id/sejoeng3"
+        android:title="다정동" />
+    <item
+        android:id="@+id/sejoeng4"
+        android:title="대평동" />
+    <item
+        android:id="@+id/sejoeng5"
+        android:title="도담동" />
+    <item
+        android:id="@+id/sejoeng6"
+        android:title="반곡동" />
+    <item
+        android:id="@+id/sejoeng7"
+        android:title="보람동" />
+    <item
+        android:id="@+id/sejoeng8"
+        android:title="부강면" />
+    <item
+        android:id="@+id/sejoeng9"
+        android:title="새롬동" />
+    <item
+        android:id="@+id/sejoeng10"
+        android:title="소담동" />
+    <item
+        android:id="@+id/sejoeng11"
+        android:title="소정면" />
+    <item
+        android:id="@+id/sejoeng12"
+        android:title="아름동" />
+    <item
+        android:id="@+id/sejoeng13"
+        android:title="연기면" />
+    <item
+        android:id="@+id/sejoeng14"
+        android:title="연동면" />
+    <item
+        android:id="@+id/sejoeng15"
+        android:title="연서면" />
+    <item
+        android:id="@+id/sejoeng16"
+        android:title="장군면" />
+    <item
+        android:id="@+id/sejoeng17"
+        android:title="전동면" />
+    <item
+        android:id="@+id/sejoeng18"
+        android:title="전의면" />
+    <item
+        android:id="@+id/sejoeng19"
+        android:title="조치원읍" />
+    <item
+        android:id="@+id/sejoeng20"
+        android:title="종촌동" />
+    <item
+        android:id="@+id/sejoeng21"
+        android:title="한솔동" />
+    <item
+        android:id="@+id/sejoeng22"
+        android:title="해밀동" />
+</menu>

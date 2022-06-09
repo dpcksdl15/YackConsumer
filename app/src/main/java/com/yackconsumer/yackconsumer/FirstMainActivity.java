@@ -1,18 +1,26 @@
 package com.yackconsumer.yackconsumer;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.view.GravityCompat;
+import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.viewpager2.widget.ViewPager2;
 
+import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.net.Uri;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import com.google.android.material.navigation.NavigationView;
 
 import org.xmlpull.v1.XmlPullParser;
 import org.xmlpull.v1.XmlPullParserException;
@@ -23,28 +31,41 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.text.DecimalFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
-import java.util.Date;
 import java.util.Timer;
 import java.util.TimerTask;
 
 public class FirstMainActivity extends AppCompatActivity {
 
+    public static Activity firstmain;
+
     ViewPager2 viewPager;
 
-    ImageView bt_button1, bt_button2, bt_button3;
+    ImageView bt_button1, bt_button2, bt_button3, bt_mypage;
+
+    DrawerLayout drawerLayout;
+
+    NavigationView navigationView;
 
     TextView tv_service, tv_data;
 
+    View.OnClickListener cl;
+
     AsyncTask asyncTask;
 
-    View.OnClickListener cl;
+    SharedPreferences sharedPreferences;
+
+    String auto_login_info;
+    String auto_login_nm;
 
     int viewcount = 0;
 
     Timer timer;
+
+    int today_count =0;
 
     private long backbuttonpress = 0;
 
@@ -65,21 +86,30 @@ public class FirstMainActivity extends AppCompatActivity {
 
     URL covid_url;
 
+    int login_value;
+
+
+    //감염자 리스트
     ArrayList<Integer> decideCntLsit = new ArrayList<>();
+    //사망자 리스트
     ArrayList<Integer> deathCntList = new ArrayList<>();
 
     int startDt, endDt, startDeathDt, endDeathDt;
     String nowDate, beforeDate, toDate;
 
+    Handler handler;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_first_main);
 
+        firstmain = FirstMainActivity.this;
+
         bt_button1 = findViewById(R.id.bt_first_main_button_1);
         bt_button2 = findViewById(R.id.bt_first_main_button_2);
         bt_button3 = findViewById(R.id.bt_first_main_button_3);
+        bt_mypage = findViewById(R.id.imgv_main_mypage);
 
         tv_service = findViewById(R.id.tv_service);
         tv_data = findViewById(R.id.tv_data);
@@ -88,6 +118,10 @@ public class FirstMainActivity extends AppCompatActivity {
         covid_sumCount = findViewById(R.id.covid_sumConut);
         covid_sumDeath = findViewById(R.id.covid_sumDeath);
         covid_dayDeath = findViewById(R.id.covid_dayDeath);
+
+        drawerLayout = findViewById(R.id.main_drawLayout);
+
+        navigationView = findViewById(R.id.nav_view);
 
         viewPager = findViewById(R.id.viewpager_first_main);
 
@@ -98,7 +132,28 @@ public class FirstMainActivity extends AppCompatActivity {
         asyncTask = new AsyncTask();
         asyncTask.execute();
 
-        bennertimer();
+        sharedPreferences = getSharedPreferences("LoginUserinfo",MODE_PRIVATE);
+        auto_login_info = sharedPreferences.getString("login", "");
+
+        try {
+            intent = getIntent();
+            login_value = intent.getExtras().getInt("loginvalue");
+        } catch (Exception e){
+            login_value = 0;
+        }
+
+
+
+        if (auto_login_info.equals("")) {
+
+            navigationView.inflateHeaderView(R.layout.main_navi_header);
+            navigationView.inflateMenu(R.menu.main_navi_menu);
+            navigationView1();
+        } else{
+            navigationView.inflateHeaderView(R.layout.main_navi_header2);
+            navigationView.inflateMenu(R.menu.main_navi_menu2);
+            navigationView2();
+        }
 
         cl = new View.OnClickListener() {
             @Override
@@ -122,6 +177,10 @@ public class FirstMainActivity extends AppCompatActivity {
                         startActivity(intent);
                         break;
 
+                    case R.id.imgv_main_mypage:
+                        drawerLayout.openDrawer(GravityCompat.END);
+                        break;
+
                     case R.id.tv_service:
                         timer.cancel();
                         intent = new Intent(getApplicationContext(), ProvisionActivity.class);
@@ -140,10 +199,54 @@ public class FirstMainActivity extends AppCompatActivity {
         bt_button1.setOnClickListener(cl);
         bt_button2.setOnClickListener(cl);
         bt_button3.setOnClickListener(cl);
+        bt_mypage.setOnClickListener(cl);
         tv_service.setOnClickListener(cl);
         tv_data.setOnClickListener(cl);
 
 
+        // 네비게이션 뷰(DrawLayout) 내 메뉴 클릭리스너
+        navigationView.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+
+                switch (item.getItemId()){
+
+                    case R.id.pmrecevie:
+                        intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
+                        startActivity(intent);
+                        break;
+
+                    case R.id.logout:
+                        SharedPreferences.Editor editor = sharedPreferences.edit();
+                        editor.clear();
+                        editor.commit();
+                        Intent intent = new Intent(getApplicationContext(), FirstMainActivity.class);
+                        startActivity(intent);
+                        finish();
+
+                        break;
+                    case R.id.account:
+
+                        if (login_value == 0){
+
+                            Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
+                            startActivity(intent1);
+
+
+                        } else if (login_value == 1){
+
+                        }
+
+                        break;
+                }
+
+                drawerLayout.closeDrawers();
+                return false;
+            }
+        });
+
+
+        // 베너 클릭 리스너
         viewpager2Adapter.setOnClickListener(new Viewpager2Adapter.OnListItemSelectedInterface() {
             @Override
             public void onItemSelected(View v, int position) {
@@ -174,6 +277,8 @@ public class FirstMainActivity extends AppCompatActivity {
 
     }
 
+
+    //코로나 현황판 업데이트
     public class AsyncTask extends android.os.AsyncTask<Void,Void,Void>{
 
         @Override
@@ -182,8 +287,7 @@ public class FirstMainActivity extends AppCompatActivity {
             runOnUiThread(new Runnable() {
                 @Override
                 public void run() {
-                    today_date(0);
-
+                    today_date(today_count);
                 }
             });
 
@@ -191,12 +295,9 @@ public class FirstMainActivity extends AppCompatActivity {
         }
     }
 
-    public void onBackpressde(){
-        onBackPressed();
-    }
+
 
     public void today_date(int i){
-
         //오늘 날짜 구하기
         SimpleDateFormat dateformat = new SimpleDateFormat("yyyyMMdd");
         Calendar calendar = Calendar.getInstance();
@@ -295,8 +396,6 @@ public class FirstMainActivity extends AppCompatActivity {
             }
         } .start();
 
-
-
     }
 
 
@@ -310,10 +409,16 @@ public class FirstMainActivity extends AppCompatActivity {
 
             Log.d("확인", String.valueOf(startDt));
 
-            covid_dayCount.setText(String.valueOf(startDt-endDt));
-            covid_sumCount.setText(String.valueOf(startDt));
-            covid_dayDeath.setText(String.valueOf(startDeathDt-endDeathDt));
-            covid_sumDeath.setText(String.valueOf(startDeathDt));
+            DecimalFormat decimalFormat = new DecimalFormat("###,###");
+            String covid_dC = decimalFormat.format(startDt-endDt);
+            String covid_sc = decimalFormat.format(startDt);
+            String covid_dd = decimalFormat.format(startDeathDt-endDeathDt);
+            String covid_sd = decimalFormat.format(startDeathDt);
+
+            covid_dayCount.setText(covid_dC);
+            covid_sumCount.setText(covid_sc);
+            covid_dayDeath.setText(covid_dd);
+            covid_sumDeath.setText(covid_sd);
 
             if (startDt-endDt == 0){
                 decideCntLsit.clear();
@@ -323,16 +428,23 @@ public class FirstMainActivity extends AppCompatActivity {
 
         } catch (Exception e){
 
-            today_date(1);
-            Log.d("확인", "리턴");
+            if (today_count < 2) {
+                today_count++;
+                today_date(today_count);
+            }
+            Log.d("확인", "리턴 "+ e);
         }
 
 
     }
 
 
+    public void onBackpressde(){
+        onBackPressed();
+    }
 
 
+    //뒤로가기 인식
     @Override
     public void onBackPressed() {
 
@@ -350,14 +462,56 @@ public class FirstMainActivity extends AppCompatActivity {
 //        super.onBackPressed();
     }
 
-    @Override
-    protected void onResume() {
-        super.onResume();
+    public void navigationView1(){
+
+        View view = navigationView.getHeaderView(0);
+
+        LinearLayout ll_navi_header = view.findViewById(R.id.ll_navi_login);
+
+        ll_navi_header.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent = new Intent(getApplicationContext(), LoginActivity.class);
+                startActivity(intent);
+
+            }
+        });
 
     }
 
+    public void navigationView2(){
+
+        View view = navigationView.getHeaderView(0);
+
+        TextView tv_user_nm = view.findViewById(R.id.tv_user_nm);
+
+        auto_login_nm = sharedPreferences.getString("user_nm", "");
+        tv_user_nm.setText(auto_login_nm+"님");
+
+    }
+
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        bennertimer();
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        timer.cancel();
+        asyncTask.cancel(true);
+    }
+
+    @Override
+    protected void onDestroy() {
+        super.onDestroy();
+    }
+
     public void bennertimer(){
-        final Handler handler = new Handler();
+        handler = new Handler();
 
     final Runnable update = new Runnable() {
         @Override

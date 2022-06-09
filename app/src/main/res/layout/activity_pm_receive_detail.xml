@@ -6,11 +6,12 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dp"
+    android:background="@color/white"
     tools:context=".PmReceiveDetailActivity">
 
 <LinearLayout
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
@@ -20,8 +21,8 @@
         android:gravity="center"
         android:fontFamily="@font/neb"
         android:textColor="@color/black"
-        android:textSize="20dp"
-        android:text="약국영수증" />
+        android:textSize="20sp"
+        android:text="약국전자영수증" />
 
 
     <View
@@ -46,16 +47,17 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="약국명 : " />
 
         <TextView
+            android:id="@+id/pharm_nm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="이블루약국" />
+            android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -67,16 +69,17 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="사업자번호 : " />
 
         <TextView
+            android:id="@+id/pharm_lisence"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="132-123-4567" />
+            android:text="" />
 
 </LinearLayout>
 
@@ -92,10 +95,11 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="약국주소 : " />
 
         <TextView
+            android:id="@+id/pharm_addr"
             android:layout_width="140dp"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
@@ -103,7 +107,7 @@
             android:layout_gravity="center"
             android:lines="2"
             android:textSize="10dp"
-            android:text="서울특별시 마포구 마포대로 114 IBK창공 5층" />
+            android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -112,19 +116,22 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="Tel : " />
 
         <TextView
+            android:id="@+id/pharm_tel"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="02-123-4567" />
+            android:text="" />
 
     </LinearLayout>
 
@@ -140,17 +147,18 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="대표명 : " />
 
         <TextView
+            android:id="@+id/pharm_ceo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:layout_gravity="center"
             android:textSize="12dp"
-            android:text="이나현" />
+            android:text="" />
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -162,16 +170,17 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="승인날짜 : " />
 
         <TextView
+            android:id="@+id/sale_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="2022.02.22 16:58:30" />
+            android:text="" />
 
     </LinearLayout>
     <View
@@ -181,6 +190,12 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/dotted_line_horizontal"
         android:layerType="software" />
+
+    <LinearLayout
+        android:id="@+id/ll_card"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -193,7 +208,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="카드사" />
 
 
@@ -204,12 +219,13 @@
 
 
         <TextView
+            android:id="@+id/sale_card"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="국민카드" />
+            android:text="" />
 
     </LinearLayout>
 
@@ -224,7 +240,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="12dp"
+            android:textSize="12sp"
             android:text="카드번호" />
 
 
@@ -235,12 +251,13 @@
 
 
         <TextView
+            android:id="@+id/sale_cardnm"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textSize="12dp"
-            android:text="1111-2222-333344" />
+            android:text="" />
 
     </LinearLayout>
 
@@ -251,6 +268,7 @@
         android:layout_marginTop="10dp"
         android:background="@drawable/dotted_line_horizontal"
         android:layerType="software" />
+    </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -261,12 +279,16 @@
         <TextView
             android:layout_width="130dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="상품명" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
 
         <TextView
             android:layout_width="100dp"
@@ -274,7 +296,7 @@
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="상품금액" />
 
 
@@ -284,7 +306,7 @@
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="수량" />
 
         <TextView
@@ -293,99 +315,18 @@
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
             android:textAlignment="center"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="금액" />
 
     </LinearLayout>
 
-    <LinearLayout
+
+    <ListView
+        android:id="@+id/med_list"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:text="조제약" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="4,000" />
-
-
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="1" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="4,000" />
-
-    </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="12dp"
-            android:text="이지엔골드 16.5g" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="4,000" />
-
-
-        <TextView
-            android:layout_width="30dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="1" />
-
-        <TextView
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textAlignment="center"
-            android:textSize="12dp"
-            android:text="4,000" />
-
-    </LinearLayout>
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        />
 
     <View
         android:layout_width="match_parent"
@@ -406,7 +347,7 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="조제" />
 
 
@@ -417,73 +358,12 @@
 
 
         <TextView
+            android:id="@+id/joje_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="4,000원" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="일반" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="4,000원" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_marginTop="5dp">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="할인" />
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"/>
-
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/neb"
-            android:textColor="@color/black"
-            android:textSize="15dp"
+            android:textSize="15sp"
             android:text="0원" />
 
     </LinearLayout>
@@ -499,8 +379,8 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="합계" />
+            android:textSize="15sp"
+            android:text="일반" />
 
 
         <LinearLayout
@@ -510,14 +390,49 @@
 
 
         <TextView
+            android:id="@+id/nomal_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="15dp"
-            android:text="8,000원" />
+            android:textSize="15sp"
+            android:text="0원" />
 
     </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="5dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/neb"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="할인" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"/>
+
+
+        <TextView
+            android:id="@+id/sale_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/neb"
+            android:textColor="@color/black"
+            android:textSize="15sp"
+            android:text="0원" />
+
+    </LinearLayout>
+
+
 
     <View
         android:layout_width="match_parent"
@@ -544,7 +459,7 @@
                 android:layout_height="wrap_content"
                 android:fontFamily="@font/neb"
                 android:textColor="@color/black"
-                android:textSize="20dp"
+                android:textSize="20sp"
                 android:text="결제금액" />
 
             <TextView
@@ -564,13 +479,14 @@
 
 
         <TextView
+            android:id="@+id/tot_price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:fontFamily="@font/neb"
             android:textColor="@color/black"
-            android:textSize="20dp"
-            android:text="8,000원" />
+            android:textSize="20sp"
+            android:text="0원" />
 
     </LinearLayout>
 
@@ -583,11 +499,12 @@
         android:layerType="software" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/img_qr"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="100dp"
         android:layout_marginTop="10dp"
-        app:srcCompat="@drawable/barcode" />
+        android:padding="5dp"
+        />
 
 
 </LinearLayout>

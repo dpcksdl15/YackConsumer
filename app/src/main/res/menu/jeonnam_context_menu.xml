@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/jeonnam1"
+        android:title="강진군" />
+    <item
+        android:id="@+id/jeonnam2"
+        android:title="고흥군" />
+    <item
+        android:id="@+id/jeonnam3"
+        android:title="곡성군" />
+    <item
+        android:id="@+id/jeonnam4"
+        android:title="광양시" />
+    <item
+        android:id="@+id/jeonnam5"
+        android:title="구례군" />
+    <item
+        android:id="@+id/jeonnam6"
+        android:title="나주시" />
+    <item
+        android:id="@+id/jeonnam7"
+        android:title="담양군" />
+    <item
+        android:id="@+id/jeonnam8"
+        android:title="목포시" />
+    <item
+        android:id="@+id/jeonnam9"
+        android:title="무안군" />
+    <item
+        android:id="@+id/jeonnam10"
+        android:title="보성군" />
+    <item
+        android:id="@+id/jeonnam11"
+        android:title="순천시" />
+    <item
+        android:id="@+id/jeonnam12"
+        android:title="신안군" />
+    <item
+        android:id="@+id/jeonnam13"
+        android:title="여수시" />
+    <item
+        android:id="@+id/jeonnam14"
+        android:title="영광군" />
+    <item
+        android:id="@+id/jeonnam15"
+        android:title="영암군" />
+    <item
+        android:id="@+id/jeonnam16"
+        android:title="완도군" />
+    <item
+        android:id="@+id/jeonnam17"
+        android:title="장성군" />
+    <item
+        android:id="@+id/jeonnam18"
+        android:title="장흥군" />
+    <item
+        android:id="@+id/jeonnam19"
+        android:title="진도군" />
+    <item
+        android:id="@+id/jeonnam20"
+        android:title="함평군" />
+    <item
+        android:id="@+id/jeonnam21"
+        android:title="해남군" />
+    <item
+        android:id="@+id/jeonnam22"
+        android:title="화순군" />
+
+</menu>

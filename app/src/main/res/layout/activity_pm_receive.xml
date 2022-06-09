@@ -129,9 +129,10 @@
 
 
     <LinearLayout
+        android:id="@+id/ll_dateReplace"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:visibility="visible"
+        android:visibility="gone"
         android:orientation="horizontal">
 
         <TextView
@@ -147,12 +148,12 @@
 
         <TextView
             android:id="@+id/tv_startDate2"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="30dp"
             android:background="@drawable/background_date_seq"
             android:gravity="center"
             android:fontFamily="@font/neb"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:textColor="#404041"
             android:text="2022.02.14"/>
 
@@ -169,12 +170,12 @@
 
         <TextView
             android:id="@+id/tv_endDate2"
-            android:layout_width="100dp"
+            android:layout_width="80dp"
             android:layout_height="30dp"
             android:background="@drawable/background_date_seq"
             android:gravity="center"
             android:fontFamily="@font/neb"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:textColor="#404041"
             android:text="2022.02.22"/>
 
@@ -182,6 +183,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_weight="1"/>
+
 
         <TextView
             android:id="@+id/tv_dateReplace2"

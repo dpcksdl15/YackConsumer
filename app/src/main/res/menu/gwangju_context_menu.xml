@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/gwangju1"
+        android:title="광산구" />
+    <item
+        android:id="@+id/gwangju2"
+        android:title="남구" />
+    <item
+        android:id="@+id/gwangju3"
+        android:title="동구" />
+    <item
+        android:id="@+id/gwangju4"
+        android:title="북구" />
+    <item
+        android:id="@+id/gwangju5"
+        android:title="서구" />
+
+</menu>
