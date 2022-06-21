@@ -12,12 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.yackconsumer.yackconsumer.MainActivity;
+import com.yackconsumer.yackconsumer.FirstMainActivity;
 import com.yackconsumer.yackconsumer.R;
 
 public class FragmentAlram extends Fragment {
 
-    MainActivity mainActivity;
+    FirstMainActivity mainActivity;
     ImageView bt_alram_add_icon;
     RecyclerView alram_recyclerview;
 
@@ -26,7 +26,7 @@ public class FragmentAlram extends Fragment {
     public void onAttach(@NonNull Context context) {
         super.onAttach(context);
         //현재 소속된 액티비티를 메인 액티비티로 한다.
-        mainActivity = (MainActivity) getActivity();
+        mainActivity = (FirstMainActivity) getActivity();
 
 
     }

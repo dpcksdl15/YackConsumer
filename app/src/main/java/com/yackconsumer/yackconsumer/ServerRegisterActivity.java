@@ -34,7 +34,8 @@ public class ServerRegisterActivity extends AsyncTask<String, Void, String> {
             String str;
 
             // 접속할 서버 주소 (이클립스에서 android.jsp 실행시 웹브라우저 주소)
-            url = new URL("http://192.168.54.92:8081/DbConn/Android/pmReceive.jsp");
+            url = new URL("http://123.143.216.253:3389/DbConn/Android/pmReceive.jsp");
+//            url = new URL("http://123.143.216.253:8081/DbConn/Android/pmReceive.jsp");
             // http://ip주소:포트번호/이클립스프로젝트명/WebContent아래폴더/androidDB.jsp
 
             conn = (HttpURLConnection) url.openConnection();
