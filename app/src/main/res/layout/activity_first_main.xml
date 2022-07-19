@@ -42,386 +42,377 @@
         </androidx.appcompat.widget.Toolbar>
 
         <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_below="@id/tool_bar"
-        >
-
-        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_below="@id/tool_bar"
+            >
 
-<!--상단-->
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:weightSum="6"
-                android:layout_marginTop="20dp"
-                android:paddingLeft="20dp"
-                android:paddingRight="20dp"
+                android:layout_height="match_parent"
                 android:orientation="vertical">
 
+                <!--상단-->
                 <LinearLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:orientation="vertical"
-                    android:layout_weight="1"
-                    android:background="@drawable/background_main_covid"
-                    >
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="20dp"
-                        android:textSize="18sp"
-                        android:layout_marginTop="10dp"
-                        android:textAlignment="center"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/neb"
-                        android:text="코로나19 현황"
-                        />
-
-                    <TextView
-                        android:id="@+id/covid_time"
-                        android:layout_width="match_parent"
-                        android:layout_height="10dp"
-                        android:layout_marginTop="10dp"
-                        android:textSize="8sp"
-                        android:textAlignment="viewEnd"
-                        android:textColor="@color/black"
-                        android:fontFamily="@font/nb"
-                        android:text="시간"
-                        />
+                    android:layout_height="wrap_content"
+                    android:weightSum="6"
+                    android:layout_marginTop="20dp"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:orientation="vertical">
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="10sp"
-                        android:layout_marginBottom="5dp"
-                        android:orientation="vertical">
+                        android:orientation="vertical"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_main_covid"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="20dp"
+                            android:textSize="18sp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/neb"
+                            android:text="코로나19 현황"
+                            />
+
+                        <TextView
+                            android:id="@+id/covid_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="10dp"
+                            android:layout_marginTop="10dp"
+                            android:textSize="8sp"
+                            android:textAlignment="viewEnd"
+                            android:textColor="@color/black"
+                            android:fontFamily="@font/nb"
+                            android:text="시간"
+                            />
 
                         <LinearLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:weightSum="2"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="10sp"
                             android:layout_marginBottom="5dp"
-                            android:orientation="horizontal">
+                            android:orientation="vertical">
 
                             <LinearLayout
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:orientation="vertical">
+                                android:weightSum="2"
+                                android:layout_marginBottom="5dp"
+                                android:orientation="horizontal">
 
-                                <TextView
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="20dp"
-                                    android:textAlignment="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:gravity="center"
-                                    android:textColor="@color/black"
-                                    android:fontFamily="@font/nb"
-                                    android:textSize="14sp"
-                                    android:text="일일 확진"/>
+                                    android:orientation="vertical">
 
-                                <TextView
-                                    android:id="@+id/covid_dayCount"
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/nb"
+                                        android:textSize="14sp"
+                                        android:text="일일 확진"/>
+
+                                    <TextView
+                                        android:id="@+id/covid_dayCount"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:paddingRight="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="#067bfe"
+                                        android:fontFamily="@font/neb"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMaxTextSize="22sp"
+                                        android:maxLines="1"
+                                        android:text="43,925"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#dbdbdb"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"/>
+
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="35dp"
-                                    android:paddingRight="10dp"
-                                    android:paddingLeft="10dp"
-                                    android:textAlignment="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:gravity="center"
-                                    android:textColor="#067bfe"
-                                    android:fontFamily="@font/neb"
-                                    android:autoSizeTextType="uniform"
-                                    android:autoSizeMaxTextSize="22sp"
-                                    android:maxLines="1"
-                                    android:text="43,925"/>
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/nb"
+                                        android:textSize="14sp"
+                                        android:text="전체 확진"/>
+
+                                    <TextView
+                                        android:id="@+id/covid_sumConut"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:paddingRight="10dp"
+                                        android:paddingLeft="10dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/neb"
+                                        android:autoSizeTextType="uniform"
+                                        android:autoSizeMaxTextSize="22sp"
+                                        android:maxLines="1"
+                                        android:text="17,658,794"/>
+                                </LinearLayout>
+
                             </LinearLayout>
 
                             <LinearLayout
-                                android:layout_width="1dp"
-                                android:layout_height="match_parent"
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
                                 android:background="#dbdbdb"
                                 android:layout_gravity="center"
                                 android:orientation="vertical"/>
 
                             <LinearLayout
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:gravity="center"
-                                android:orientation="vertical">
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="5dp"
+                                android:layout_marginBottom="10dp"
+                                android:weightSum="2"
+                                android:orientation="horizontal">
 
-                                <TextView
-                                    android:layout_width="match_parent"
-                                    android:layout_height="20dp"
-                                    android:textAlignment="center"
-                                    android:gravity="center"
-                                    android:textColor="@color/black"
-                                    android:fontFamily="@font/nb"
-                                    android:textSize="14sp"
-                                    android:text="전체 확진"/>
 
-                                <TextView
-                                    android:id="@+id/covid_sumConut"
+                                <LinearLayout
                                     android:layout_width="match_parent"
-                                    android:layout_height="35dp"
-                                    android:paddingRight="10dp"
-                                    android:paddingLeft="10dp"
-                                    android:textAlignment="center"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
                                     android:gravity="center"
-                                    android:textColor="@color/black"
-                                    android:fontFamily="@font/neb"
-                                    android:autoSizeTextType="uniform"
-                                    android:autoSizeMaxTextSize="22sp"
-                                    android:maxLines="1"
-                                    android:text="17,658,794"/>
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/nb"
+                                        android:textSize="14sp"
+                                        android:text="일일 사망"/>
+
+                                    <TextView
+                                        android:id="@+id/covid_dayDeath"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="#067bfe"
+                                        android:fontFamily="@font/neb"
+                                        android:textSize="22sp"
+                                        android:text="29"/>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="1dp"
+                                    android:layout_height="match_parent"
+                                    android:background="#dbdbdb"
+                                    android:layout_gravity="center"
+                                    android:orientation="vertical"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="20dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/nb"
+                                        android:textSize="14sp"
+                                        android:text="전체 사망"/>
+
+                                    <TextView
+                                        android:id="@+id/covid_sumDeath"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="35dp"
+                                        android:textAlignment="center"
+                                        android:gravity="center"
+                                        android:textColor="@color/black"
+                                        android:fontFamily="@font/neb"
+                                        android:textSize="22sp"
+                                        android:text="23,491"/>
+                                </LinearLayout>
+
                             </LinearLayout>
 
                         </LinearLayout>
 
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="1dp"
-                            android:background="#dbdbdb"
-                            android:layout_gravity="center"
-                            android:orientation="vertical"/>
+                    </LinearLayout>
 
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:layout_marginTop="5dp"
-                        android:layout_marginBottom="10dp"
-                        android:weightSum="2"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="2"
+                        >
 
-
-                        <LinearLayout
+                        <ImageView
+                            android:id="@+id/bt_first_main_button_3"
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:textAlignment="center"
-                                android:gravity="center"
-                                android:textColor="@color/black"
-                                android:fontFamily="@font/nb"
-                                android:textSize="14sp"
-                                android:text="일일 사망"/>
-
-                            <TextView
-                                android:id="@+id/covid_dayDeath"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:textAlignment="center"
-                                android:gravity="center"
-                                android:textColor="#067bfe"
-                                android:fontFamily="@font/neb"
-                                android:textSize="22sp"
-                                android:text="29"/>
-                        </LinearLayout>
-
-                        <LinearLayout
-                            android:layout_width="1dp"
-                            android:layout_height="match_parent"
-                            android:background="#dbdbdb"
-                            android:layout_gravity="center"
-                            android:orientation="vertical"/>
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <TextView
-                                android:layout_width="match_parent"
-                                android:layout_height="20dp"
-                                android:textAlignment="center"
-                                android:gravity="center"
-                                android:textColor="@color/black"
-                                android:fontFamily="@font/nb"
-                                android:textSize="14sp"
-                                android:text="전체 사망"/>
-
-                            <TextView
-                                android:id="@+id/covid_sumDeath"
-                                android:layout_width="match_parent"
-                                android:layout_height="35dp"
-                                android:textAlignment="center"
-                                android:gravity="center"
-                                android:textColor="@color/black"
-                                android:fontFamily="@font/neb"
-                                android:textSize="22sp"
-                                android:text="23,491"/>
-                        </LinearLayout>
+                            android:layout_height="151dp"
+                            android:src="@drawable/d"
+                            android:scaleType="fitXY"
+                            />
 
                     </LinearLayout>
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="110dp"
+                        android:layout_weight="1"
+                        android:layout_marginTop="20dp"
+                        >
+
+                        <androidx.viewpager2.widget.ViewPager2
+                            android:id="@+id/viewpager_first_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal">
+
+                        </androidx.viewpager2.widget.ViewPager2>
+
                     </LinearLayout>
 
-                </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:layout_marginTop="20dp"
-                    android:layout_weight="2"
-                    android:orientation="horizontal"
-                    >
-
-                    <ImageView
-                        android:id="@+id/bt_first_main_button_3"
-                        android:layout_width="match_parent"
-                        android:layout_marginRight="5dp"
-                        android:layout_height="151dp"
-                        android:src="@drawable/button_salecheck"
-                        android:scaleType="fitXY"
-                        android:layout_weight="1"
-                        />
-
-                    <ImageView
-                        android:id="@+id/bt_first_main_button_3"
-                        android:layout_width="match_parent"
-                        android:layout_height="151dp"
-                        android:layout_marginLeft="5dp"
-                        android:src="@drawable/button_salecheck"
-                        android:scaleType="fitXY"
-                        android:layout_weight="1"
-                        />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="110dp"
-                    android:layout_weight="1"
-                    android:layout_marginTop="20dp"
-                    >
-
-                    <androidx.viewpager2.widget.ViewPager2
-                        android:id="@+id/viewpager_first_main"
+                    <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="horizontal">
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="2"
+                        >
 
-                    </androidx.viewpager2.widget.ViewPager2>
+                        <ImageView
+                            android:id="@+id/bt_first_main_button_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/main_button_1"
+                            android:scaleType="fitXY"
+                            />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_weight="2"
+                        >
+
+                        <ImageView
+                            android:id="@+id/bt_first_main_button_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/main_button_2"
+                            android:scaleType="fitXY"
+                            />
+
+                    </LinearLayout>
+
+
+
+
 
                 </LinearLayout>
 
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_weight="2"
-        >
-
-        <ImageView
-            android:id="@+id/bt_first_main_button_1"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/main_button_1"
-            android:scaleType="fitXY"
-            />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginTop="20dp"
-        android:layout_weight="2"
-        >
-
-        <ImageView
-            android:id="@+id/bt_first_main_button_2"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:src="@drawable/main_button_2"
-            android:scaleType="fitXY"
-            />
-
-    </LinearLayout>
-
-    </LinearLayout>
-
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:background="#fafafa"
-                android:backgroundTint="#fafafa">
-
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="60dp"
-                    android:layout_height="30dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    app:srcCompat="@drawable/bottom_text_logo" />
-
-                <TextView
+                <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="24dp"
-                    android:layout_marginLeft="10dp"
-                    android:textSize="12sp"
-                    android:fontFamily="@font/nr"
-                    android:lineSpacingExtra="3dp"
-                    android:textColor="#b6b6b6"
-                    android:text="(주)이블루 퍼프 (대표 이나현)\n사업자 등록번호 : 572-87-00597\n본사 : 경상북도 구미시 산호대로 253, 구미첨단의료기술타워 303호\nR&amp;D센터 : 서울특별시 마포구 마포대로 114 IBK 창공 5층\n전화번호 : 1522-0229\n홈페이지 : www.eblue.co.kr\n대표이메일 : ceo@eblue.co.kr"/>
+                    android:orientation="vertical"
+                    android:background="#fafafa"
+                    android:backgroundTint="#fafafa">
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="14dp"
-                    android:layout_marginTop="20dp"
-                    android:layout_marginLeft="10dp"
-                    android:layout_marginBottom="20dp"
-                    android:orientation="horizontal">
+                    <ImageView
+                        android:id="@+id/imageView4"
+                        android:layout_width="60dp"
+                        android:layout_height="30dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        app:srcCompat="@drawable/bottom_text_logo" />
 
                     <TextView
-                        android:id="@+id/tv_service"
-                        android:layout_width="wrap_content"
+                        android:layout_width="match_parent"
                         android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginLeft="10dp"
                         android:textSize="12sp"
-                        android:fontFamily="@font/neb"
-                        android:textColor="#828282"
-                        android:text="서비스 이용약관"/>
+                        android:fontFamily="@font/nr"
+                        android:lineSpacingExtra="3dp"
+                        android:textColor="#b6b6b6"
+                        android:text="(주)이블루 퍼프 (대표 이나현)\n사업자 등록번호 : 572-87-00597\n본사 : 경상북도 구미시 산호대로 253, 구미첨단의료기술타워 303호\nR&amp;D센터 : 서울특별시 마포구 마포대로 114 IBK 창공 5층\n전화번호 : 1522-0229\n홈페이지 : www.eblue.co.kr\n대표이메일 : ceo@eblue.co.kr"/>
 
-                    <TextView
+                    <LinearLayout
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/neb"
-                        android:textColor="#828282"
-                        android:text="|"/>
+                        android:layout_height="14dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="horizontal">
 
-                    <TextView
-                        android:id="@+id/tv_data"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="8dp"
-                        android:textSize="12sp"
-                        android:fontFamily="@font/neb"
-                        android:textColor="#828282"
-                        android:text="개인정보처리방침"/>
+                        <TextView
+                            android:id="@+id/tv_service"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/neb"
+                            android:textColor="#828282"
+                            android:text="서비스 이용약관"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/neb"
+                            android:textColor="#828282"
+                            android:text="|"/>
+
+                        <TextView
+                            android:id="@+id/tv_data"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/neb"
+                            android:textColor="#828282"
+                            android:text="개인정보처리방침"/>
+
+                    </LinearLayout>
 
                 </LinearLayout>
 
             </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
     </RelativeLayout>
 
     <com.google.android.material.navigation.NavigationView

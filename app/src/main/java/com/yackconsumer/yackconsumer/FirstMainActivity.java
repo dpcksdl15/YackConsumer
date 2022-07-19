@@ -173,6 +173,7 @@ public class FirstMainActivity extends AppCompatActivity {
                         break;
 
                     case R.id.bt_first_main_button_3:
+                        timer.cancel();
                         intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
                         startActivity(intent);
                         break;
@@ -212,8 +213,7 @@ public class FirstMainActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.pmrecevie:
-                        intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
-                        startActivity(intent);
+
                         break;
 
                     case R.id.logout:
