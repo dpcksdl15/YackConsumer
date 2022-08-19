@@ -101,14 +101,19 @@ public class MdSearchAdpter extends RecyclerView.Adapter<MdSearchAdpter.ViewHold
             String text3 = mlist3.get(position);
             Bitmap bitmap;
 
-            if (mlist4.size() != 0) {
-                if (mlist4.get(position) != null){
-                    bitmap = mlist4.get(position);
-                    holder.imageView.setImageBitmap(bitmap);
-                } else {
-                    holder.imageView.setImageResource(R.drawable.mdsearch_noresult);
-                }
+            try {
 
+                if (mlist4.size() != 0) {
+                    if (mlist4.get(position) != null) {
+                        bitmap = mlist4.get(position);
+                        holder.imageView.setImageBitmap(bitmap);
+                    } else {
+                        holder.imageView.setImageResource(R.drawable.mdsearch_noresult);
+                    }
+
+
+                }
+            } catch (Exception e){
 
             }
             holder.tv_md_name.setText(text2);

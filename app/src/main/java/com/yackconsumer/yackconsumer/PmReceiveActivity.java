@@ -36,6 +36,8 @@ import java.util.concurrent.ExecutionException;
 
 public class PmReceiveActivity extends AppCompatActivity {
 
+    // 0:id확인, 1:가입중복확인, 2:가입, 3:로그인, 4:전자영수증, 5:전자영수증자세히보기
+
     TextView tv_totalCount,tv_totalPrice,tv_dateReplace, tv_startDate1, tv_endDate1, tv_startDate2, tv_endDate2, tv_dateReplace2;
     ImageView back_icon;
     RecyclerView rv_pmReceive;
@@ -73,7 +75,7 @@ public class PmReceiveActivity extends AppCompatActivity {
 
     //결과값 리턴
     String result, rs;
-    String value = "3";
+    String value = "4";
     String value_id = null, value_hp = null, value_login;
 
 

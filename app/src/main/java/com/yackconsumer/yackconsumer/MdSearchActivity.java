@@ -157,6 +157,7 @@ public class MdSearchActivity extends AppCompatActivity {
             mdialog.setMessage("검색중입니다");
 
             mdialog.show();
+            mdialog.setCancelable(false);
             super.onPreExecute();
         }
 
@@ -215,7 +216,7 @@ public class MdSearchActivity extends AppCompatActivity {
 
 
         boolean urlversion = str.matches("[+-]?\\d*(\\.\\d+)?");
-        Log.d("확인", String.valueOf(urlversion) + str);
+        Log.d("확인", String.valueOf(urlversion) + str+1);
         try{
 
             if (urlversion == false) {

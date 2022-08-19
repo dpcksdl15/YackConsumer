@@ -7,7 +7,7 @@
     android:layout_height="wrap_content"
     android:padding="10dp"
     android:layout_marginBottom="12dp"
-    android:background="@drawable/backgound_md_price_result_list"
+    android:background="@drawable/background_md_price_result_list"
     android:orientation="horizontal">
 
 

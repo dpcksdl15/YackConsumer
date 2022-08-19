@@ -20,7 +20,7 @@ import java.nio.charset.StandardCharsets;
 
 public class ServerRegisterActivity extends AsyncTask<String, Void, String> {
     // vlaue값
-    // 0:가입, 1:id확인, 2:로그인, 3:id전자영수증, 4:전자영수증자세히보기
+    // 0:id확인, 1:가입중복확인, 2:가입, 3:로그인, 4:전자영수증, 5:전자영수증자세히보기
 
     String sendMsg, receiveMsg;
     URL url;
@@ -44,21 +44,25 @@ public class ServerRegisterActivity extends AsyncTask<String, Void, String> {
             osw = new OutputStreamWriter(conn.getOutputStream(),"UTF-8");
 
             // 전송할 데이터. GET 방식으로 작성
-            if (strings[0].equals("1")) {
+            if (strings[0].equals("0")) {
                 sendMsg = "value=" + strings[0] + "&id=" + strings[1];
                 Log.d("0번 ID중복확인 보내기", "확인");
-            } else if (strings[0].equals("0")){
-                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&pw=" + strings[2] + "&user_nm=" + strings[3] + "&user_hp=" + strings[4] + "&city=" + strings[5] + "&modifi_ymd=" + strings[6] + "&user_uqnum=" + strings[7];
-                Log.d("1번 가입 보내기", "확인");
-            } else if (strings[0].equals("2")){
-                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&pw=" + strings[2];
-                Log.d("2번 로그인 보내기", "확인");
+            } else if (strings[0].equals("1")) {
+                sendMsg = "value=" + strings[0] + "&user_hp=" + strings[1] + "&modifi_ymd=" + strings[2];
+                Log.d("1번 중복가입확인 보내기", "확인");
+            }else if (strings[0].equals("2")){
+                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&pw=" + strings[2] + "&user_nm=" + strings[3] + "&user_hp=" + strings[4] + "&city=" + strings[5]
+                        + "&modifi_ymd=" + strings[6] + "&user_uqnum=" + strings[7] + "&sex=" + strings[8] + "&stipulation=" + strings[9] + "&pims=" + strings[10] + "&reporting=" + strings[11];
+                Log.d("2번 가입 보내기", "확인");
             } else if (strings[0].equals("3")){
-                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&hp=" + strings[2] + "&st=" + strings[3] + "&ed=" + strings[4];
-                Log.d("3번 전자영수증 보내기", sendMsg);
+                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&pw=" + strings[2];
+                Log.d("3번 로그인 보내기", "확인");
             } else if (strings[0].equals("4")){
+                sendMsg = "value=" + strings[0] + "&id=" + strings[1] + "&hp=" + strings[2] + "&st=" + strings[3] + "&ed=" + strings[4];
+                Log.d("4번 전자영수증 보내기", sendMsg);
+            } else if (strings[0].equals("5")){
                 sendMsg = "value=" + strings[0] + "&saleno=" + strings[1];
-                Log.d("4번 전자영수증자세히 보내기", sendMsg);
+                Log.d("5번 전자영수증자세히 보내기", sendMsg);
             }
 
             osw.write(sendMsg);

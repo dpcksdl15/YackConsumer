@@ -24,7 +24,7 @@
         android:layout_weight="1"
         android:gravity="center"
         android:fontFamily="@font/nb"
-        android:background="@drawable/background_alram_add_recycler_list_b"
+        android:background="@drawable/background_alram_add_recycler_list"
         android:text="오후"/>
 
 </LinearLayout>

@@ -4,7 +4,7 @@
         <item
             android:id="@+id/pmrecevie"
             style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
-            android:title="매출조회"
+            android:title="전자영수증"
             />
         <item
             android:id="@+id/mdsearch"

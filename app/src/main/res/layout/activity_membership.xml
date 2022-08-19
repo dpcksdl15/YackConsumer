@@ -64,7 +64,7 @@
         android:textColor="@color/white"
         android:fontFamily="@font/nb"
         android:textSize="12sp"
-        android:background="@drawable/backgound_md_price_search_button"
+        android:background="@drawable/background_md_price_search_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView8" />
 
@@ -276,6 +276,50 @@
             app:layout_constraintStart_toEndOf="@+id/et_phnm"
             app:layout_constraintTop_toBottomOf="@+id/textView24" />
 
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/nr"
+            android:text="성별"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/et_phnf" />
+
+        <TextView
+            android:id="@+id/sex_men"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/background_login_text"
+            android:gravity="center"
+            android:text="남"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toStartOf="@+id/sex_wom"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
+        <TextView
+            android:id="@+id/sex_wom"
+            android:layout_width="0dp"
+            android:layout_height="36dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="20dp"
+            android:background="@drawable/background_login_text"
+            android:text="여"
+            android:textColor="@color/black"
+            android:gravity="center"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/sex_men"
+            app:layout_constraintTop_toBottomOf="@+id/textView14" />
+
     <TextView
         android:id="@+id/textView13"
         android:layout_width="wrap_content"
@@ -287,7 +331,7 @@
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/et_phnf" />
+        app:layout_constraintTop_toBottomOf="@+id/sex_men" />
 
         <TextView
             android:id="@+id/select_do"
@@ -576,6 +620,58 @@
 
         </LinearLayout>
 
+
+        <LinearLayout
+            android:id="@+id/check3"
+            android:layout_width="match_parent"
+            android:layout_height="43dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check2">
+
+            <CheckBox
+                android:id="@+id/ckb3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="제 3자 정보 제공 동의"
+                android:buttonTint="#ff067bfe"
+                android:textColor="@color/black"
+                android:textSize="12sp"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <TextView
+                android:id="@+id/textView20"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:fontFamily="@font/nb"
+                android:text="(필수)"
+                android:textColor="#067bfe"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1" />
+
+            <TextView
+                android:id="@+id/tv_provision3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/nr"
+                android:text="내용보기"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
         <Button
             android:id="@+id/bt_memberinfo_enter"
             android:layout_width="match_parent"
@@ -587,10 +683,10 @@
             android:textColor="@color/white"
             android:fontFamily="@font/neb"
             android:textSize="14sp"
-            android:background="@drawable/backgound_md_price_search_button"
+            android:background="@drawable/background_md_price_search_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/check2" />
+            app:layout_constraintTop_toBottomOf="@+id/check3" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>

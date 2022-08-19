@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.ContextMenu;
@@ -18,20 +19,23 @@ import android.widget.Toast;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
+import java.util.concurrent.ExecutionException;
 
 public class MembershipActivity extends AppCompatActivity {
 
     // vlaue값
-    // 0:가입, 1:id확인, 2:로그인, 3:id전자영수증, 4:전자영수증자세히보기
+    // 0:id확인, 1:가입중복확인, 2:가입, 3:로그인, 4:전자영수증, 5:전자영수증자세히보기
     // 자동 회원 번호은 13자리 EX) 고유값(7) + 가입시간(초)(11) + 가입날짜(220325) + 핸드폰번호 뒷4자리(3408)
     // 22 년 03월 25일 11시 28분 11초
+    // 성별은 0 : 남 , 1 : 여
 
     Button bt_memberinfo_enter, bt_idCheck;
-    TextView select_do, select_si, tv_provision, tv_provision2;
+    TextView select_do, select_si, tv_provision, tv_provision2, tv_provision3,sex_mem,sex_wom;
     EditText et_id, et_pw, et_repw, et_name, et_y, et_m, et_d, et_phnf, et_phnm, et_phnl;
-    CheckBox ckb_all, ckb1, ckb2;
+    CheckBox ckb_all, ckb1, ckb2, ckb3;
     String value = "0", today, day_yymmdd, day_ss, value_uqnum ,value_adrr ,value_do, value_si, value_id, value_pw, value_repw, value_name, value_Bday, value_phn;
-    static int check[] = {0,0,0,0,0,0,0};
+
+    int sex;
 
     //결과값 리턴
     String result, rs;
@@ -51,6 +55,8 @@ public class MembershipActivity extends AppCompatActivity {
         et_phnf = findViewById(R.id.et_phnf);
         et_phnm = findViewById(R.id.et_phnm);
         et_phnl = findViewById(R.id.et_phnl);
+        sex_mem = findViewById(R.id.sex_men);
+        sex_wom = findViewById(R.id.sex_wom);
         select_do = findViewById(R.id.select_do);
         select_si = findViewById(R.id.select_si);
         bt_memberinfo_enter = findViewById(R.id.bt_memberinfo_enter);
@@ -58,9 +64,12 @@ public class MembershipActivity extends AppCompatActivity {
         ckb_all = findViewById(R.id.ckb_all);
         ckb1 = findViewById(R.id.ckb1);
         ckb2 = findViewById(R.id.ckb2);
+        ckb3 = findViewById(R.id.ckb3);
         tv_provision = findViewById(R.id.tv_provision);
         tv_provision2 = findViewById(R.id.tv_provision2);
+        tv_provision3 = findViewById(R.id.tv_provision3);
 
+        int check[] = {0,0,0,0,0,0,0,0};
 
         //가입버튼
         bt_memberinfo_enter.setOnClickListener(new View.OnClickListener() {
@@ -115,7 +124,24 @@ public class MembershipActivity extends AppCompatActivity {
                 if (et_phnf.getText().toString().equals("") == false && et_phnm.getText().toString().equals("") == false && et_phnl.getText().toString().equals("") == false) {
                     if (Integer.parseInt(et_phnf.getText().toString()) < 20 && et_phnf.getText().toString().length() == 3 && Integer.parseInt(et_phnm.getText().toString()) <= 9999 && et_phnm.getText().toString().length() >=3 && Integer.parseInt(et_phnl.getText().toString()) <= 9999 && et_phnl.getText().toString().length() >= 4) {
                         value_phn = et_phnf.getText().toString() + et_phnm.getText().toString() + et_phnl.getText().toString();
-                        check[4] = 1;
+
+                        ServerRegisterActivity task = new ServerRegisterActivity();
+                        value = "1";
+                        try {
+                            result = task.execute(value,value_phn,value_Bday).get();
+                        } catch (ExecutionException e) {
+                            e.printStackTrace();
+                        } catch (InterruptedException e) {
+                            e.printStackTrace();
+                        }
+
+                        if (result.trim().equals("1")) {
+                            check[4] = 1;
+                        } else {
+                            check[4] = 0;
+                            Log.d("중복확인", String.valueOf(check[4]));
+                            Toast.makeText(getApplicationContext(),"이미 가입된 회원정보 입니다.",Toast.LENGTH_SHORT).show();
+                        }
                     } else {
                         Toast.makeText(getApplicationContext(),"전화번호를 올바르게 입력해 주세요.",Toast.LENGTH_SHORT).show();
                     }
@@ -123,28 +149,38 @@ public class MembershipActivity extends AppCompatActivity {
                     Toast.makeText(getApplicationContext(),"전화번호를 빠짐없이 입력해 주세요.",Toast.LENGTH_SHORT).show();
                 }
 
-                if (value_do != ""){
+                //성별확인
+                if (sex != 0 && sex != 1){
+                    Toast.makeText(getApplicationContext(),"성별을 선택해 주세요.",Toast.LENGTH_SHORT).show();
+                } else {
+                    check[7] = 1;
+                }
+
+
+                //사는곳
+                if (value_do != null){
                     check[5] =1;
                     value_adrr = value_do;
                 }else {
                     Toast.makeText(getApplicationContext(),"지역을 선택하여 주세요.",Toast.LENGTH_SHORT).show();
                 }
 
-                if (value_si != ""){
+                if (value_si != null){
                     check[6] =1;
                     value_adrr = value_adrr + " " + value_si;
                 }else {
                     Toast.makeText(getApplicationContext(),"지역을 선택하여 주세요.",Toast.LENGTH_SHORT).show();
                 }
 
+                //입력 확인
+                if (check[0] != 0 && check[1] != 0 && check[2] != 0 && check[3] != 0 && check[4] != 0 && check[5] != 0 && check[6] != 0 && check[7] != 0) {
 
-                if (check[0] != 0 && check[1] != 0 && check[2] != 0 && check[3] != 0 && check[4] != 0 && check[5] != 0 && check[6] != 0) {
-
-                    value = "0";
+                    value = "2";
                     try {
 
                         //오늘 날짜 구하기
                         SimpleDateFormat dateformat = new SimpleDateFormat("yyMMddss");
+                        SimpleDateFormat dateformat2 = new SimpleDateFormat("yy/MM/dd");
                         Calendar calendar = Calendar.getInstance();
                         calendar.add(Calendar.DATE,0);
                         today  = dateformat.format(calendar.getTime());
@@ -153,9 +189,10 @@ public class MembershipActivity extends AppCompatActivity {
 
                         value_uqnum = "7" + day_ss + day_yymmdd + et_phnl.getText().toString();
 
+                        today = dateformat2.format(calendar.getTime());
 
                         ServerRegisterActivity task = new ServerRegisterActivity();
-                        result = task.execute(value, value_id, value_pw, value_name, value_phn, value_adrr, value_Bday, value_uqnum).get();
+                        result = task.execute(value, value_id, value_pw, value_name, value_phn, value_adrr, value_Bday, value_uqnum, String.valueOf(sex), today, today, today).get();
                         rs = result.trim();
                         if (rs.equals("1")){
 
@@ -170,6 +207,7 @@ public class MembershipActivity extends AppCompatActivity {
                         }
 
                     } catch (Exception e){
+                        Toast.makeText(getApplicationContext(),"오류가 발생했습니다 잠시후에 다시 시도해주세요.",Toast.LENGTH_SHORT).show();
                         Log.d("MemberInfoDBUplode", ".....ERROR.....!");
                     }
 
@@ -189,7 +227,7 @@ public class MembershipActivity extends AppCompatActivity {
                 try {
 
                     String id = et_id.getText().toString();
-                    value = "1";
+                    value = "0";
 
                     if (id.length() >= 6) {
                         ServerRegisterActivity task = new ServerRegisterActivity();
@@ -212,12 +250,37 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
 
+        //남 성별 클릭
+        sex_mem.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sex_mem.setBackgroundResource(R.drawable.background_alram_date_b);
+                sex_wom.setBackgroundResource(R.drawable.background_login_text);
+                sex_mem.setTextColor(Color.WHITE);
+                sex_wom.setTextColor(Color.GRAY);
+                sex = 0;
+            }
+        });
+
+        //여 성별 클릭
+        sex_wom.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                sex_mem.setBackgroundResource(R.drawable.background_login_text);
+                sex_wom.setBackgroundResource(R.drawable.background_alram_date_b);
+                sex_mem.setTextColor(Color.GRAY);
+                sex_wom.setTextColor(Color.WHITE);
+                sex = 1;
+            }
+        });
+
         // 시도 클릭시 설정
         select_do.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 registerForContextMenu(select_do);
                 openContextMenu(select_do);
+                select_si.setText(null);
             }
         });
 
@@ -240,16 +303,18 @@ public class MembershipActivity extends AppCompatActivity {
                 if (ckb_all.isChecked() == true) {
                     ckb1.setChecked(true);
                     ckb2.setChecked(true);
+                    ckb3.setChecked(true);
                 } else if (ckb_all.isChecked() != true){
                     ckb1.setChecked(false);
                     ckb2.setChecked(false);
+                    ckb3.setChecked(false);
                 }
             }
         });
         ckb1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ckb1.isChecked() && ckb2.isChecked()){
+                if(ckb1.isChecked() && ckb2.isChecked() && ckb3.isChecked()){
                     ckb_all.setChecked(true);
                 } else {
                     ckb_all.setChecked(false);
@@ -259,7 +324,18 @@ public class MembershipActivity extends AppCompatActivity {
         ckb2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(ckb1.isChecked() && ckb2.isChecked()){
+                if(ckb1.isChecked() && ckb2.isChecked() && ckb3.isChecked()){
+                    ckb_all.setChecked(true);
+                }else {
+                    ckb_all.setChecked(false);
+                }
+            }
+        });
+
+        ckb3.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(ckb1.isChecked() && ckb2.isChecked() && ckb3.isChecked()){
                     ckb_all.setChecked(true);
                 }else {
                     ckb_all.setChecked(false);
@@ -276,6 +352,13 @@ public class MembershipActivity extends AppCompatActivity {
             }
         });
         tv_provision2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Provision2Activity.class);
+                startActivity(intent);
+            }
+        });
+        tv_provision3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(getApplicationContext(), Provision2Activity.class);

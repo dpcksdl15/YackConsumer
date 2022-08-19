@@ -13,10 +13,11 @@
         android:layout_marginStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/background_login_button"
+        android:background="@drawable/background_alram_date_b"
         android:fontFamily="@font/nb"
         android:letterSpacing="0.1"
         android:text="로그인"
+        android:textColor="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ckb_autologin" />
@@ -80,16 +81,31 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
+        android:id="@+id/text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nr"
+        android:text="아직 회원이 아니신가요?"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bt_login" />
+
+    <TextView
         android:id="@+id/tv_membership"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:fontFamily="@font/nr"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="20dp"
+        android:fontFamily="@font/nb"
         android:text="회원가입"
-        android:textSize="10sp"
-        android:visibility="gone"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        android:textColor="@color/basic"
+        android:textSize="15sp"
+        android:visibility="visible"
+        app:layout_constraintStart_toEndOf="@+id/text"
         app:layout_constraintTop_toBottomOf="@+id/bt_login" />
 
     <CheckBox

@@ -44,7 +44,7 @@ public class FirstMainActivity extends AppCompatActivity {
 
     ViewPager2 viewPager;
 
-    ImageView bt_button1, bt_button2, bt_button3, bt_mypage;
+    ImageView bt_button1, bt_button2, bt_button3, bt_mypage, bt_alarm, bt_update;
 
     DrawerLayout drawerLayout;
 
@@ -110,6 +110,8 @@ public class FirstMainActivity extends AppCompatActivity {
         bt_button2 = findViewById(R.id.bt_first_main_button_2);
         bt_button3 = findViewById(R.id.bt_first_main_button_3);
         bt_mypage = findViewById(R.id.imgv_main_mypage);
+        bt_alarm = findViewById(R.id.bt_first_main_button_alarm);
+        bt_update = findViewById(R.id.bt_first_main_button_update);
 
         tv_service = findViewById(R.id.tv_service);
         tv_data = findViewById(R.id.tv_data);
@@ -118,6 +120,8 @@ public class FirstMainActivity extends AppCompatActivity {
         covid_sumCount = findViewById(R.id.covid_sumConut);
         covid_sumDeath = findViewById(R.id.covid_sumDeath);
         covid_dayDeath = findViewById(R.id.covid_dayDeath);
+
+
 
         drawerLayout = findViewById(R.id.main_drawLayout);
 
@@ -141,6 +145,7 @@ public class FirstMainActivity extends AppCompatActivity {
         } catch (Exception e){
             login_value = 0;
         }
+
 
 
 
@@ -174,8 +179,17 @@ public class FirstMainActivity extends AppCompatActivity {
 
                     case R.id.bt_first_main_button_3:
                         timer.cancel();
-                        intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
-                        startActivity(intent);
+                        if (login_value == 0){
+
+                            Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
+                            startActivity(intent1);
+
+                        } else if (login_value == 1){
+
+                            intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
+                            startActivity(intent);
+
+                        }
                         break;
 
                     case R.id.imgv_main_mypage:
@@ -193,6 +207,13 @@ public class FirstMainActivity extends AppCompatActivity {
                         intent = new Intent(getApplicationContext(), Provision2Activity.class);
                         startActivity(intent);
                         break;
+
+                    case R.id.bt_first_main_button_alarm:
+                        Toast.makeText(getApplicationContext(), "추후업데이트예정입니다", Toast.LENGTH_SHORT).show();
+//                        timer.cancel();
+//                        intent = new Intent(getApplicationContext(), AlarmActivity.class);
+//                        startActivity(intent);
+                        break;
                 }
 
             }
@@ -203,6 +224,8 @@ public class FirstMainActivity extends AppCompatActivity {
         bt_mypage.setOnClickListener(cl);
         tv_service.setOnClickListener(cl);
         tv_data.setOnClickListener(cl);
+        bt_alarm.setOnClickListener(cl);
+        bt_update.setOnClickListener(cl);
 
 
         // 네비게이션 뷰(DrawLayout) 내 메뉴 클릭리스너
@@ -214,6 +237,17 @@ public class FirstMainActivity extends AppCompatActivity {
 
                     case R.id.pmrecevie:
 
+                        if (login_value == 0){
+
+                            Intent intent1 = new Intent(getApplicationContext(), LoginActivity.class);
+                            startActivity(intent1);
+
+                        } else if (login_value == 1){
+
+                            intent = new Intent(getApplicationContext(), PmReceiveActivity.class);
+                            startActivity(intent);
+
+                        }
                         break;
 
                     case R.id.logout:

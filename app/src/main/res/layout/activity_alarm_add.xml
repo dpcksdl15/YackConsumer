@@ -1,0 +1,513 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:backgroundTint="#dbdbdb"
+    tools:context=".AlarmAddActivity">
+
+    <LinearLayout
+        android:id="@+id/top_layout"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:orientation="horizontal"
+        android:background="@drawable/box_shadow_bottom"
+        >
+
+        <ImageView
+            android:id="@+id/bt_back_icon"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            app:srcCompat="@drawable/backbutton_icon"
+            />
+
+        <TextView
+            android:id="@+id/et_search_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="16sp"
+            android:fontFamily="@font/nr"
+            android:textColor="#404041"
+            android:text="복약 알람" />
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp"
+            />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="16dp">
+
+
+        <TextView
+            android:id="@+id/textView14"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="36dp"
+            android:layout_marginEnd="195dp"
+            android:layout_toEndOf="@+id/imageView2"
+            android:fontFamily="@font/gm"
+            android:text="알람제목"
+            android:textColor="#404041"
+            android:textSize="14sp" />
+
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="36dp"
+            app:srcCompat="@drawable/alram_title" />
+
+        <EditText
+            android:id="@+id/et_alram_name"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@+id/textView14"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/background_text_edit"
+            android:ems="10"
+            android:hint="약이름이나 알람제목을 입력해 주세요!"
+            android:paddingLeft="20dp"
+            android:textSize="12sp" />
+
+
+        <ImageView
+            android:id="@+id/imageView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_alram_name"
+            android:layout_marginTop="32dp"
+            app:srcCompat="@drawable/icon3" />
+
+
+        <TextView
+            android:id="@+id/textView15"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/et_alram_name"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="195dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:fontFamily="@font/gm"
+            android:text="복약설정"
+            android:textColor="#404041"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:id="@+id/ll_view"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:layout_below="@+id/textView15"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_everyday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginRight="5dp"
+                android:background="@drawable/background_md_price_search_text"
+                android:gravity="center"
+                android:text="매일" />
+
+            <TextView
+                android:id="@+id/tv_daysetting"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginLeft="5dp"
+                android:background="@drawable/background_md_price_search_text"
+                android:gravity="center"
+                android:text="맞춤" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_view2"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_below="@id/ll_view"
+            android:layout_marginTop="18dp"
+            android:background="@drawable/background_text_edit"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingLeft="20dp"
+            android:paddingTop="16dp"
+            android:paddingRight="20dp"
+            android:paddingBottom="16dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:scaleType="centerInside"
+                android:src="@drawable/alram_calendar_icon" />
+
+            <TextView
+                android:id="@+id/tv_dayToday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/gm"
+                android:text="8.9 월 - 8.10 화"
+                android:textColor="#404041"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_calenderSetting"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/nb"
+                android:text="변경"
+                android:textColor="#067bfe"
+                android:textSize="14sp" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_view5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_below="@id/ll_view2"
+            android:visibility="visible"
+            android:background="@drawable/background_text_edit"
+            android:orientation="vertical"
+            >
+
+            <LinearLayout
+                android:id="@+id/ll_view4"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/ll_view2"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/background_text_edit"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingTop="16dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/alram_cycle_icon" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/gm"
+                    android:text="맞춤 설정"
+                    android:textColor="#404041"
+                    android:textSize="14sp" />
+
+
+            </LinearLayout>
+
+
+
+        <LinearLayout
+            android:id="@+id/ll_view6"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:gravity="center"
+            android:background="@drawable/background_text_edit"
+            android:orientation="horizontal"
+            >
+            <Button
+                android:id="@+id/bt_weekend"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/background_alarm_daysetting_w"
+                android:fontFamily="@font/gm"
+                android:gravity="center"
+                android:text="요일"
+                android:textColor="#404041"
+                android:textSize="14sp" />
+            <Button
+                android:id="@+id/bt_dayCycle"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/background_alarm_daysetting_w"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:fontFamily="@font/gm"
+                android:text="주기"
+                android:textColor="#404041"
+                android:textSize="14sp" />
+        </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_weekend"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/ll_view6"
+                android:background="@drawable/background_text_edit"
+                android:paddingRight="15dp"
+                android:paddingLeft="15dp"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/tv_day1"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="월"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day2"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="화"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day3"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="수"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day4"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="목"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day5"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="금"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day6"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="토"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:id="@+id/tv_day7"
+                    android:layout_width="34dp"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:text="일"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_week"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_below="@id/ll_view6"
+                android:background="@drawable/background_text_edit"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <EditText
+                    android:id="@+id/et_dayNum"
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_weight="2"
+                    android:background="@drawable/background_alram_date"
+                    android:fontFamily="@font/nb"
+                    android:gravity="center"
+                    android:inputType="number"
+                    android:hint="숫자 입력"
+                    android:textColor="#404041"
+                    android:textSize="12sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="34dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/background_login_text">
+
+                    <TextView
+                        android:id="@+id/tv_day"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nb"
+                        android:gravity="center"
+                        android:text="일 마다"
+                        android:textColor="#404041"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_week"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nb"
+                        android:gravity="center"
+                        android:text="주 마다"
+                        android:textColor="#404041"
+                        android:textSize="12sp" />
+
+                    <TextView
+                        android:id="@+id/tv_month"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:fontFamily="@font/nb"
+                        android:gravity="center"
+                        android:text="개월 마다"
+                        android:textColor="#404041"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+            </LinearLayout>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_view5"
+            android:layout_marginTop="32dp"
+            app:srcCompat="@drawable/alram_icon" />
+
+
+        <TextView
+            android:id="@+id/textView17"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/ll_view5"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="32dp"
+            android:layout_marginEnd="195dp"
+            android:layout_toEndOf="@+id/imageView3"
+            android:fontFamily="@font/gm"
+            android:text="알람설정"
+            android:textColor="#404041"
+            android:textSize="14sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/re_alarmView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_below="@id/textView17" />
+
+        <LinearLayout
+            android:id="@+id/ll_view3"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_below="@+id/re_alarmView"
+            android:layout_marginTop="10dp"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/imageView5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/alram_add_recycler_add" />
+
+            <TextView
+                android:id="@+id/tv_alram_add"
+                android:layout_width="wrap_content"
+                android:layout_height="13dp"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/imageView5"
+                android:fontFamily="@font/nr"
+                android:text="추가하기"
+                android:textColor="#979797"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/bt_save"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/background_login_button"
+            android:fontFamily="@font/neb"
+            android:text="저장하기"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+</LinearLayout>

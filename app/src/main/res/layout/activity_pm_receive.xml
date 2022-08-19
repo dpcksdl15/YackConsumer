@@ -66,7 +66,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="vertical"
-        android:background="@drawable/backgound_receive_main_top1">
+        android:background="@drawable/background_receive_main_top1">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -204,7 +204,7 @@
         android:layout_width="match_parent"
         android:layout_height="40dp"
         android:orientation="horizontal"
-        android:background="@drawable/backgound_receive_main_top2">
+        android:background="@drawable/background_receive_main_top2">
 
 
             <TextView

@@ -24,13 +24,13 @@ public class LoginActivity extends AppCompatActivity {
 
 
     // vlaue값
-    // 0:가입, 1:id확인, 2:로그인, 3:id전자영수증, 4:전자영수증자세히보기
+    // 0:id확인, 1:가입중복확인, 2:가입, 3:로그인, 4:전자영수증, 5:전자영수증자세히보기
 
     Button bt_login;
     EditText et_id, et_pw;
     TextView bt_membership;
 
-    String value = "2";
+    String value = "3";
     String value_id = null, value_pw = null;
 
     //결과값 리턴

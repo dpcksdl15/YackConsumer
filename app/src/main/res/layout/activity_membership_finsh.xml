@@ -14,7 +14,7 @@
         android:layout_marginTop="40dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
-        android:background="@drawable/backgound_md_price_search_button"
+        android:background="@drawable/background_md_price_search_button"
         android:fontFamily="@font/neb"
         android:text="로그인으로 이동하기"
         android:textColor="@color/white"

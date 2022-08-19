@@ -38,6 +38,8 @@ import java.util.concurrent.ExecutionException;
 
 public class PmReceiveDetailActivity extends AppCompatActivity {
 
+    // 0:id확인, 1:가입중복확인, 2:가입, 3:로그인, 4:전자영수증, 5:전자영수증자세히보기
+
     TextView tv_pharm_nm, tv_pharm_lisence, tv_pharm_addr, tv_pharm_tel, tv_pharm_ceo, tv_sale_date, tv_sale_card, tv_sale_cardnm, tv_joje_price, tv_nomal_price;
     TextView tv_sale_price, tv_tot_price;
     ListView lv_med_list;
@@ -47,7 +49,7 @@ public class PmReceiveDetailActivity extends AppCompatActivity {
 
     //결과값 리턴
     String result, rs;
-    String value = "4";
+    String value = "5";
     int sale_no;
 
     //리턴값 정제
