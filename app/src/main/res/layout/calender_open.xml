@@ -9,7 +9,14 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <com.prolificinteractive.materialcalendarview.MaterialCalendarView
+            android:id="@+id/calendar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:mcv_selectionColor="@color/basic"
+            app:mcv_selectionMode="range"
 
+            />
 
         <Button
             android:id="@+id/bt_save"
@@ -17,7 +24,9 @@
             android:layout_height="40dp"
             android:layout_alignParentBottom="true"
             android:layout_marginBottom="10dp"
-            android:background="@drawable/background_login_button"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@drawable/background_login_button_b"
             android:fontFamily="@font/neb"
             android:text="저장하기"
             android:textColor="@color/white"

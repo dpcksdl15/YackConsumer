@@ -105,7 +105,7 @@ public class MembershipActivity extends AppCompatActivity {
 
                 //생년월일
                 if (et_y.getText().toString().equals("") == false && et_m.getText().toString().equals("") == false && et_d.getText().toString().equals("") == false) {
-                    if (Integer.parseInt(et_y.getText().toString()) > 1900 && Integer.parseInt(et_m.getText().toString()) > 0 && Integer.parseInt(et_d.getText().toString()) <= 12 && Integer.parseInt(et_d.getText().toString()) > 0 && Integer.parseInt(et_d.getText().toString()) <= 31) {
+                    if (Integer.parseInt(et_y.getText().toString()) > 1900 && Integer.parseInt(et_m.getText().toString()) > 0 && Integer.parseInt(et_m.getText().toString()) <= 12 && Integer.parseInt(et_d.getText().toString()) > 0 && Integer.parseInt(et_d.getText().toString()) <= 31) {
                         if (et_m.getText().toString().length() > 2){
                             value_Bday = et_y.getText().toString() + "-" + "0" + et_m.getText().toString() + "-" + et_d.getText().toString();
                         } else if (et_d.getText().toString().length() > 2){

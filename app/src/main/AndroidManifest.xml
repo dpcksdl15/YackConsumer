@@ -16,6 +16,9 @@
         android:theme="@style/Theme.YackConsumer"
         android:usesCleartextTraffic="true">
         <activity
+            android:name=".MyPageActivity"
+            android:exported="true" />
+        <activity
             android:name=".AlarmAddActivity"
             android:exported="true" />
         <activity
@@ -38,7 +41,7 @@
             android:exported="true" />
         <activity
             android:name=".CalenderOpen"
-            android:exported="true"/>
+            android:exported="true" />
         <activity
             android:name=".LodingActivity"
             android:exported="true">

@@ -86,7 +86,7 @@ public class FirstMainActivity extends AppCompatActivity {
 
     URL covid_url;
 
-    int login_value;
+    int login_value = 0;
 
 
     //감염자 리스트
@@ -139,14 +139,11 @@ public class FirstMainActivity extends AppCompatActivity {
         sharedPreferences = getSharedPreferences("LoginUserinfo",MODE_PRIVATE);
         auto_login_info = sharedPreferences.getString("login", "");
 
-        try {
-            intent = getIntent();
-            login_value = intent.getExtras().getInt("loginvalue");
-        } catch (Exception e){
-            login_value = 0;
-        }
-
-
+            if (auto_login_info.equals("") == true){
+                login_value = 0;
+            } else {
+                login_value = 1;
+            }
 
 
         if (auto_login_info.equals("")) {
@@ -154,6 +151,7 @@ public class FirstMainActivity extends AppCompatActivity {
             navigationView.inflateHeaderView(R.layout.main_navi_header);
             navigationView.inflateMenu(R.menu.main_navi_menu);
             navigationView1();
+
         } else{
             navigationView.inflateHeaderView(R.layout.main_navi_header2);
             navigationView.inflateMenu(R.menu.main_navi_menu2);

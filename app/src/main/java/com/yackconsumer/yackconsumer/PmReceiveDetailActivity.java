@@ -72,6 +72,8 @@ public class PmReceiveDetailActivity extends AppCompatActivity {
     String filename;
     String res = null;
 
+    DecimalFormat format = new DecimalFormat("###,###");
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -127,7 +129,7 @@ public class PmReceiveDetailActivity extends AppCompatActivity {
                         } else {
                             joje_price = joje_price + Integer.parseInt(jsonObject.getString("TOT_PRICE"));
                         }
-                        if (jsonObject.getString("DISCOUNT").equals("0") != true){
+                        if (jsonObject.getString("DISCOUNT").equals("0") != true && jsonObject.getString("MED_GB").equals("전문의약품") != true){
                             discount = discount + Integer.parseInt(jsonObject.getString("DISCOUNT"));
                         }
 
@@ -161,10 +163,10 @@ public class PmReceiveDetailActivity extends AppCompatActivity {
                         ll_card.setVisibility(View.GONE);
                     }
 
-                    tv_joje_price.setText(String.valueOf(joje_price)+"원");
-                    tv_nomal_price.setText(String.valueOf(nomal_price)+"원");
-                    tv_sale_price.setText(String.valueOf(discount)+"원");
-                    tv_tot_price.setText(joje_price + nomal_price - discount + "원");
+                    tv_joje_price.setText(format.format(joje_price)+"원");
+                    tv_nomal_price.setText(format.format(nomal_price)+"원");
+                    tv_sale_price.setText(format.format(discount)+"원");
+                    tv_tot_price.setText(format.format(joje_price + nomal_price - discount)+"원");
 
                             qrThread qrthread = new qrThread();
                             qrthread.start();
@@ -315,6 +317,13 @@ public class PmReceiveDetailActivity extends AppCompatActivity {
             client.connect(host,21);
             client.enterLocalPassiveMode();
         } catch (Exception e){
+            try {
+                client.disconnect();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            } catch (Exception ex){
+                ex.printStackTrace();
+            }
             return false;
         }
         return true;
